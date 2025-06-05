@@ -1,0 +1,67 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Gustavo Togeiro de Alckmin"
+  description: "Ag-Tech Professional | Remote Sensing Researcher | Data Scientist"
+  site-url: "https://gtalckmin.github.io/alckmin-quarto-site"
+  repo-url: "https://github.com/gtalckmin/alckmin-quarto-site"
+  
+  navbar:
+    background: primary
+    foreground: light
+    logo: "images/main-logo.png"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: experience.qmd
+        text: Experience
+      - href: projects.qmd
+        text: Projects
+      - href: posts/index.qmd
+        text: Blog
+    right:
+      - icon: github
+        href: https://github.com/gtalckmin
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/gtalckmin/
+        aria-label: LinkedIn
+      - icon: twitter
+        href: https://twitter.com/GustavoTA8
+        aria-label: Twitter
+      - icon: envelope
+        href: mailto:gustavo.togeirodealckmin@missouri.edu
+        aria-label: Email
+
+  page-footer:
+    background: dark
+    left: |
+      © 2025 Gustavo Togeiro de Alckmin. All rights reserved.
+    center: |
+      Built with [Quarto](https://quarto.org/) and [Bootstrap](https://getbootstrap.com/)
+    right: |
+      [{{< fa envelope >}}](mailto:gustavo.togeirodealckmin@missouri.edu)
+      [{{< fa brands github >}}](https://github.com/gtalckmin)
+      [{{< fa brands linkedin >}}](https://www.linkedin.com/in/gtalckmin/)
+
+format:
+  html:
+    theme: 
+      - bootstrap
+      - custom.scss
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-fold: true
+    code-summary: "Show code"
+    page-layout: full
+    anchor-sections: true
+    smooth-scroll: true
+    
+execute:
+  freeze: auto
+  cache: true

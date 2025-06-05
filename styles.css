@@ -1,0 +1,48 @@
+/* Additional custom styles */
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom code block styling */
+pre {
+  border-radius: 0.75rem;
+  border: 1px solid #e9ecef;
+}
+
+/* Table styling */
+.table {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Callout styling */
+.callout {
+  border-radius: 0.75rem;
+  border-left: 4px solid;
+  margin: 1.5rem 0;
+}
+
+/* Figure captions */
+figcaption {
+  font-style: italic;
+  color: #6c757d;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Link styling */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Card hover effects */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}

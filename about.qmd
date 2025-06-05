@@ -1,0 +1,112 @@
+---
+title: "About Me"
+---
+
+::: {.container}
+::: {.row}
+::: {.col-md-8}
+## Background
+
+I am an Ag-Tech Professional working as a Postdoc Researcher at the University of Missouri. I specialize in Remote Sensing and Machine Learning applications for Agriculture. My work focuses on developing innovative techniques for precision agriculture, particularly in biomass estimation and canopy height sensing.
+
+I strive to make great quality research and work extensively with R and Python. My passion lies in measuring grass for a living and contributing to sustainable farming practices. M-I-Z-..... Z-O-U! 🐅
+
+## Research Interests
+
+- **Remote Sensing Applications**: Satellite-based time-series analysis for agricultural monitoring
+- **Machine Learning**: Advanced algorithms for crop yield prediction and biomass estimation  
+- **Precision Agriculture**: Development of sensors and web-based applications for farm management
+- **Data Science**: Statistical modeling and data visualization for agricultural insights
+- **Sustainable Farming**: Technology solutions for improved agricultural practices
+
+## Education
+
+My academic journey has taken me through rigorous training in agricultural technology, remote sensing, and data science. I have developed expertise in both theoretical foundations and practical applications of technology in agriculture.
+
+## Philosophy
+
+I believe in the power of technology to transform agriculture and make farming more efficient, sustainable, and productive. My work bridges the gap between cutting-edge research and practical applications that can directly benefit farmers and agricultural communities.
+
+---
+
+### Contact Information
+
+Feel free to reach out if you'd like to collaborate on research, discuss agricultural technology, or learn more about my work.
+
+**Email**: [gustavo.togeirodealckmin@missouri.edu](mailto:gustavo.togeirodealckmin@missouri.edu)
+
+**Current Position**: Postdoc Researcher  
+**Institution**: University of Missouri  
+**Department**: [Missouri Forage and Livestock Program](https://muforagelivestock.org/)
+
+:::
+
+::: {.col-md-4}
+::: {.sticky-top .pt-3}
+![Gustavo Togeiro de Alckmin](images/author/Gustavo.jpg){.img-fluid .rounded-circle .mx-auto .d-block style="width: 250px; height: 250px; object-fit: cover;"}
+
+### Skills Overview
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(ggplot2)
+library(dplyr)
+
+# Skills data
+skills <- data.frame(
+  skill = c("Remote Sensing", "R Programming", "LaTeX", "Inkscape", "Machine Learning", "Python"),
+  percentage = c(100, 95, 90, 85, 85, 80),
+  color = c("#ff6b35", "#3498db", "#f1c40f", "#e91e63", "#87ceeb", "#2ecc71")
+)
+
+# Create a simple bar chart
+ggplot(skills, aes(x = reorder(skill, percentage), y = percentage, fill = color)) +
+  geom_col(width = 0.6) +
+  scale_fill_identity() +
+  coord_flip() +
+  labs(
+    x = "",
+    y = "Proficiency (%)"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 10),
+    axis.title = element_text(size = 10),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  ) +
+  scale_y_continuous(limits = c(0, 100), breaks = seq(0, 100, 25))
+```
+
+### Connect With Me
+
+::: {.d-grid .gap-2}
+[{{< fa brands github >}} GitHub](https://github.com/gtalckmin){.btn .btn-outline-dark .btn-sm}
+
+[{{< fa brands linkedin >}} LinkedIn](https://www.linkedin.com/in/gtalckmin/){.btn .btn-outline-primary .btn-sm}
+
+[{{< fa brands twitter >}} Twitter](https://twitter.com/GustavoTA8){.btn .btn-outline-info .btn-sm}
+
+[{{< fa brands whatsapp >}} WhatsApp](https://wa.me/message/JHMF5ARIGFTSB1){.btn .btn-outline-success .btn-sm}
+
+[{{< fa envelope >}} Email](mailto:gustavo.togeirodealckmin@missouri.edu){.btn .btn-outline-danger .btn-sm}
+:::
+
+### Quick Facts
+
+- 🌱 I measure grass for a living
+- 🛰️ Remote sensing enthusiast  
+- 🤖 Machine learning practitioner
+- 📊 R & Python developer
+- 🎓 Postdoc at Mizzou
+- 🌾 Agriculture technology advocate
+
+:::
+:::
+:::
+:::

@@ -1,0 +1,142 @@
+---
+title: "Welcome"
+page-layout: custom
+toc: false
+---
+
+::: {.hero-section}
+::: {.container}
+::: {.row .align-items-center}
+::: {.col-md-8}
+# Hi, I am Gustavo Togeiro de Alckmin
+
+## Ag-Tech Professional | Remote Sensing Researcher
+
+I work with Remote Sensing and Machine Learning for Agriculture. I strive to make great quality research and measure grass for a living! 🌱
+
+[Learn More About Me](about.qmd){.btn .btn-light .btn-lg .me-3}
+[View My Projects](projects.qmd){.btn .btn-outline-light .btn-lg}
+:::
+
+::: {.col-md-4 .text-center}
+![](images/author/Gustavo.jpg){.profile-img .img-fluid}
+:::
+:::
+:::
+:::
+
+::: {.container .mt-5}
+## What I Do
+
+::: {.row .g-4}
+::: {.col-md-4}
+::: {.feature-card .h-100}
+::: {.feature-icon}
+{{< fa satellite >}}
+:::
+### Remote Sensing
+Development of satellite-based time-series techniques for biomass estimation and precision agriculture applications.
+:::
+:::
+
+::: {.col-md-4}
+::: {.feature-card .h-100}
+::: {.feature-icon}
+{{< fa robot >}}
+:::
+### Machine Learning
+Applying cutting-edge ML algorithms to agricultural data for improved crop monitoring and yield prediction.
+:::
+:::
+
+::: {.col-md-4}
+::: {.feature-card .h-100}
+::: {.feature-icon}
+{{< fa chart-line >}}
+:::
+### Data Science
+Transforming complex agricultural datasets into actionable insights using R, Python, and advanced analytics.
+:::
+:::
+:::
+:::
+
+::: {.container .mt-5}
+## Latest Research & Projects
+
+::: {.row .g-4}
+::: {.col-md-6}
+::: {.project-preview}
+### Canopy Height Sensing
+Development of innovative canopy-height sensors and web-based applications for precision pasture management.
+
+[Learn More →](projects.qmd)
+:::
+:::
+
+::: {.col-md-6}
+::: {.project-preview}
+### Satellite Time-Series Analysis
+Advanced techniques for processing satellite imagery to monitor agricultural systems over time.
+
+[View Project →](projects.qmd)
+:::
+:::
+:::
+:::
+
+::: {.container .mt-5}
+## Skills & Expertise
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(ggplot2)
+library(dplyr)
+
+# Skills data based on your YAML
+skills <- data.frame(
+  skill = c("Remote Sensing", "R Programming", "LaTeX", "Inkscape", "Machine Learning", "Python"),
+  percentage = c(100, 95, 90, 85, 85, 80),
+  color = c("#ff6b35", "#3498db", "#f1c40f", "#e91e63", "#87ceeb", "#2ecc71")
+)
+
+# Create horizontal bar chart
+ggplot(skills, aes(x = reorder(skill, percentage), y = percentage, fill = color)) +
+  geom_col(width = 0.7) +
+  scale_fill_identity() +
+  coord_flip() +
+  labs(
+    title = "Technical Skills",
+    x = "",
+    y = "Proficiency (%)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+    axis.text = element_text(size = 12),
+    axis.title = element_text(size = 12),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA)
+  ) +
+  scale_y_continuous(limits = c(0, 100), breaks = seq(0, 100, 20))
+```
+:::
+
+::: {.container .mt-5}
+## Current Position
+
+::: {.position-card}
+**Postdoc Researcher** at **University of Missouri**  
+*August 2021 - Present*
+
+- Development of Remote Sensing Techniques, particularly satellite-based time-series, for biomass estimation
+- Development of canopy-height sensor and web-based applications  
+- Scientific Writing and Publication
+
+[View Full Experience →](experience.qmd)
+:::
+:::

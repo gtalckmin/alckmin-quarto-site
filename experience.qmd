@@ -1,0 +1,218 @@
+---
+title: "Professional Experience"
+---
+
+::: {.container}
+# Professional Journey
+
+My career spans academia, entrepreneurship, and industry, with a focus on agricultural technology, remote sensing, and data science.
+
+::: {.timeline}
+
+::: {.timeline-item}
+::: {.timeline-content}
+### Postdoc Researcher
+::: {.company}
+**University of Missouri** | Columbia, MO, United States
+:::
+::: {.duration}
+August 2021 - Present
+:::
+
+Working with the [Missouri Forage and Livestock Program](https://muforagelivestock.org/) to develop innovative solutions for precision pasture management.
+
+**Key Responsibilities:**
+- Development of Remote Sensing Techniques, particularly satellite-based time-series, for biomass estimation
+- Development of canopy-height sensor and web-based applications
+- Scientific Writing and Publication
+- Collaboration with interdisciplinary research teams
+
+**Research Focus:**
+- Satellite imagery analysis for agricultural monitoring
+- Machine learning applications in precision agriculture
+- Sensor development for field-based measurements
+- Web application development for farm management tools
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-content}
+### PhD Candidate
+::: {.company}
+**Wageningen University & University of Tasmania** | Netherlands & Australia
+:::
+::: {.duration}
+May 2016 - May 2021
+:::
+
+Conducted doctoral research focusing on agricultural remote sensing and precision farming technologies.
+
+**Key Responsibilities:**
+- Experimental Design and Research Plan Development
+- Data Collection and Analysis using advanced statistical methods
+- Scientific Writing and Publication in peer-reviewed journals
+- International collaboration between European and Australian institutions
+
+**Research Achievements:**
+- Developed novel approaches to crop monitoring using satellite data
+- Advanced understanding of precision agriculture applications
+- Published research in high-impact agricultural and remote sensing journals
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-content}
+### Founder
+::: {.company}
+**AB Ag Imagery** | São Paulo State, Brazil
+:::
+::: {.duration}
+April 2014 - August 2015
+:::
+
+Founded and led a startup focused on agricultural imagery and remote sensing services.
+
+**Key Responsibilities:**
+- Development of UAV and sensing business plan
+- Seed Funding acquisition and investor relations
+- Development of Proposal for R&D of multispectral cameras for agriculture
+- Business development and client acquisition
+- Technical product development
+
+**Achievements:**
+- Successfully secured seed funding for agricultural technology startup
+- Developed innovative UAV-based sensing solutions for Brazilian agriculture
+- Created business partnerships with agricultural producers
+- Advanced R&D in multispectral imaging technology
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-content}
+### Sugar Trader (Commercial Executive)
+::: {.company}
+**Czarnikow** | São Paulo, SP, Brazil
+:::
+::: {.duration}
+October 2010 - August 2011
+:::
+
+Worked with a leading international sugar trading company with operations since 1861.
+
+**Key Responsibilities:**
+- Sugar Trading Assistance to Brazil's Raw Sugar Market
+- Development of exotic structures for molasses hedging
+- Business Intelligence for sugar industrial consumers
+- Market analysis and risk assessment
+- Client relationship management
+
+**Achievements:**
+- Contributed to Brazil's raw sugar market operations
+- Developed innovative financial instruments for agricultural commodities
+- Provided strategic business intelligence to industrial clients
+- Gained deep understanding of agricultural commodity markets
+:::
+:::
+
+:::
+
+---
+
+## Skills Development Timeline
+
+Throughout my career, I've continuously developed expertise in:
+
+::: {.row .g-4 .mt-4}
+::: {.col-md-3}
+::: {.skill-category}
+### Technical Skills
+- Remote Sensing (100%)
+- R Programming (95%)
+- Python (80%)
+- Machine Learning (85%)
+- LaTeX (90%)
+- Inkscape (85%)
+:::
+:::
+
+::: {.col-md-3}
+::: {.skill-category}
+### Research Skills
+- Experimental Design
+- Statistical Analysis
+- Scientific Writing
+- Data Visualization
+- Peer Review Process
+- Grant Writing
+:::
+:::
+
+::: {.col-md-3}
+::: {.skill-category}
+### Business Skills
+- Startup Management
+- Business Development
+- Investor Relations
+- Market Analysis
+- Strategic Planning
+- Project Management
+:::
+:::
+
+::: {.col-md-3}
+::: {.skill-category}
+### Industry Knowledge
+- Precision Agriculture
+- Agricultural Commodities
+- UAV Technology
+- Sensor Development
+- Web Applications
+- International Markets
+:::
+:::
+:::
+
+---
+
+## Current Research & Development
+
+At the University of Missouri, I'm actively involved in cutting-edge research that combines remote sensing, machine learning, and agricultural applications. My work contributes to:
+
+- **Sustainable Agriculture**: Developing tools for more efficient resource use
+- **Precision Farming**: Creating technology for site-specific crop management
+- **Data-Driven Decisions**: Providing farmers with actionable insights
+- **Technology Transfer**: Bridging research and practical applications
+
+[View My Current Projects →](projects.qmd)
+
+:::
+
+<style>
+.skill-category {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.skill-category h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.skill-category li:last-child {
+  border-bottom: none;
+}
+</style>
