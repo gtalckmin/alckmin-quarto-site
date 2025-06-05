@@ -1,0 +1,110 @@
+---
+title: "Hello R Markdown"
+author: "Gustavo Togeiro de Alckmin"
+date: "2015-07-23"
+categories: ["R", "Data Science"]
+tags: ["R Markdown", "plot", "regression", "tutorial"]
+description: "An introduction to R Markdown and its capabilities for reproducible research"
+image: "plots/pie-chart.png"
+---
+
+# R Markdown for Reproducible Research
+
+This is an R Markdown document demonstrating the power of literate programming. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+R Markdown has been instrumental in my research workflow, allowing me to combine code, analysis, and narrative in a single document. This is particularly valuable in agricultural research where reproducibility and transparency are crucial.
+
+## Embedding R Code
+
+You can embed an R code chunk like this:
+
+```{r cars}
+#| label: cars-summary
+#| echo: true
+#| message: false
+
+# Load necessary libraries
+library(ggplot2)
+
+# Examine the built-in cars dataset
+summary(cars)
+
+# Fit a linear model
+fit <- lm(dist ~ speed, data = cars)
+summary(fit)
+```
+
+The relationship between speed and stopping distance is clearly non-linear, which is typical in many agricultural and physical processes I work with in my remote sensing research.
+
+## Creating Visualizations
+
+Let's create a more informative plot than the original:
+
+```{r speed-distance-plot}
+#| label: fig-speed-distance
+#| fig-cap: "Relationship between speed and stopping distance"
+#| echo: true
+#| warning: false
+
+ggplot(cars, aes(x = speed, y = dist)) +
+  geom_point(color = "#2c3e50", size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "#3498db", fill = "#3498db", alpha = 0.2) +
+  labs(
+    title = "Car Speed vs Stopping Distance",
+    x = "Speed (mph)",
+    y = "Stopping Distance (ft)",
+    subtitle = "Linear relationship with considerable variation"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    plot.subtitle = element_text(size = 12, color = "gray60"),
+    axis.title = element_text(size = 12),
+    panel.grid.minor = element_blank()
+  )
+```
+
+## Including Traditional Plots
+
+You can also embed traditional R plots. Here's the classic pie chart example:
+
+```{r pie}
+#| label: fig-pie
+#| fig-cap: "A fancy pie chart demonstrating traditional R graphics"
+#| echo: true
+
+par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
+  col = c('#0292D8', '#F7EA39', '#C4B632'),
+  init.angle = -50, 
+  border = NA
+)
+```
+
+## Relevance to Agricultural Research
+
+In my work with remote sensing and agricultural data, R Markdown serves several important purposes:
+
+1. **Reproducible Analysis**: All analysis steps are documented and can be re-run
+2. **Transparent Methods**: Code is visible alongside results and interpretation
+3. **Efficient Report Generation**: Same document can produce multiple output formats
+4. **Version Control**: Text-based format works well with Git for tracking changes
+
+This approach has been invaluable in my PhD research and current postdoc work, where reproducibility and transparency are essential for scientific credibility.
+
+## Modern Alternatives
+
+While R Markdown has served the community well, I'm now transitioning to **Quarto** (which powers this website) as it offers:
+
+- Better multi-language support (R, Python, Julia)
+- More flexible output formats
+- Enhanced web publishing capabilities
+- Improved visual editor
+
+The principles remain the same: combining code, analysis, and narrative for reproducible research.
+
+---
+
+*This post demonstrates the evolution of my documentation and analysis workflow from traditional R Markdown to modern Quarto publishing.*

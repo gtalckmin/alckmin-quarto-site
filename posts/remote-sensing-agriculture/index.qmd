@@ -1,0 +1,162 @@
+---
+title: "Remote Sensing for Precision Agriculture"
+author: "Gustavo Togeiro de Alckmin"
+date: "2024-03-15"
+categories: ["Remote Sensing", "Agriculture", "Research"]
+tags: ["satellite imagery", "GEE", "precision agriculture", "biomass"]
+description: "How satellite-based remote sensing is revolutionizing modern agriculture"
+image: "images/satellite-agriculture.jpg"
+---
+
+# The Future of Farming is in the Sky
+
+Remote sensing technology has transformed how we monitor and manage agricultural systems. As a researcher working at the intersection of technology and agriculture, I've witnessed firsthand how satellite imagery and advanced analytics are revolutionizing farming practices.
+
+## What is Remote Sensing in Agriculture?
+
+Remote sensing involves collecting information about agricultural areas without being in direct contact with them. This is typically done using satellites, drones, or aircraft equipped with various sensors that capture different wavelengths of light reflected from crops and soil.
+
+In my work at the University of Missouri, I focus on:
+
+- **Biomass estimation** using satellite time-series data
+- **Crop health monitoring** through vegetation indices
+- **Yield prediction** using machine learning algorithms
+- **Precision agriculture** applications for site-specific management
+
+## Key Technologies I Work With
+
+### Google Earth Engine (GEE)
+
+Google Earth Engine has been a game-changer for agricultural remote sensing. It provides:
+
+```{r gee-example}
+#| eval: false
+#| echo: true
+
+# Example of GEE workflow in R
+library(rgee)
+
+# Initialize GEE
+ee_Initialize()
+
+# Load Sentinel-2 imagery
+s2 <- ee$ImageCollection("COPERNICUS/S2_SR")$
+  filterDate("2023-06-01", "2023-08-31")$
+  filterBounds(my_study_area)$
+  filter(ee$Filter$lt("CLOUDY_PIXEL_PERCENTAGE", 20))
+
+# Calculate NDVI
+ndvi <- s2$map(function(image) {
+  return(image$normalizedDifference(c("B8", "B4"))$rename("NDVI"))
+})
+
+# Get time series for analysis
+ndvi_ts <- ndvi$getRegion(my_study_area, 10)
+```
+
+### Satellite Data Sources
+
+The satellites I commonly work with include:
+
+1. **Sentinel-2**: High-resolution optical imagery (10-60m)
+2. **Landsat**: Long-term historical data (30m)
+3. **MODIS**: Daily global coverage (250-1000m)
+4. **Planet**: Very high-resolution commercial imagery (3-5m)
+
+## Real-World Applications
+
+### Pasture Management
+
+In my current research, I'm developing systems for:
+
+- **Biomass quantification**: Estimating grass quantity for grazing management
+- **Growth rate monitoring**: Tracking pasture recovery after grazing
+- **Seasonal patterns**: Understanding long-term vegetation dynamics
+
+### Crop Monitoring
+
+Remote sensing enables farmers to:
+
+- Identify stressed areas before visual symptoms appear
+- Optimize irrigation and fertilizer application
+- Predict yields for planning and marketing
+- Monitor crop development throughout the season
+
+## Challenges and Solutions
+
+### Cloud Cover
+
+One major challenge in optical remote sensing is cloud cover. I address this by:
+
+- Using time-series approaches with multiple observations
+- Combining different satellite systems
+- Implementing cloud-masking algorithms
+- Exploring radar data (Sentinel-1) for cloudy conditions
+
+### Ground Truth Data
+
+Accurate remote sensing requires field validation:
+
+```r
+# Example of correlating satellite data with field measurements
+library(ggplot2)
+
+ggplot(validation_data, aes(x = satellite_ndvi, y = field_biomass)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Satellite NDVI vs Field Biomass",
+    x = "Satellite NDVI",
+    y = "Field Biomass (kg/ha)"
+  ) +
+  theme_minimal()
+```
+
+## Machine Learning Integration
+
+Modern remote sensing increasingly relies on machine learning:
+
+### Regression Models
+- Predicting continuous variables (biomass, yield)
+- Using multiple spectral bands as predictors
+- Time-series analysis for temporal patterns
+
+### Classification
+- Crop type mapping
+- Disease detection
+- Land use classification
+
+### Deep Learning
+- Convolutional neural networks for image analysis
+- Recurrent neural networks for time-series
+- Transfer learning from large datasets
+
+## Future Directions
+
+The field is rapidly evolving with:
+
+1. **Higher spatial and temporal resolution** satellites
+2. **Hyperspectral imaging** for detailed crop analysis
+3. **AI and machine learning** integration
+4. **Real-time data processing** capabilities
+5. **Integration with IoT sensors** for comprehensive monitoring
+
+## Getting Started
+
+For researchers interested in agricultural remote sensing:
+
+1. **Learn R or Python** for data analysis
+2. **Explore Google Earth Engine** for satellite data access
+3. **Understand basic vegetation indices** (NDVI, EVI, etc.)
+4. **Practice with open datasets** (Landsat, Sentinel)
+5. **Connect with field measurements** for validation
+
+## Conclusion
+
+Remote sensing is no longer just a research tool—it's becoming essential for modern agriculture. As we face challenges of feeding a growing population while managing environmental resources, these technologies offer unprecedented insights into agricultural systems.
+
+The integration of satellite data, machine learning, and field expertise is creating new possibilities for precision agriculture that can increase productivity while reducing environmental impact.
+
+---
+
+*Want to learn more about my remote sensing research? [Contact me](mailto:gustavo.togeirodealckmin@missouri.edu) or check out my [current projects](../../projects.qmd).*

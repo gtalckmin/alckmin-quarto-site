@@ -1,0 +1,35 @@
+/.quarto/
+/_site/
+/docs/.nojekyll
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+
+# Cache
+.cache/
+
+# Temporary files
+*~
+.#*
+\#*#
+.#*
+*#

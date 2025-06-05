@@ -1,0 +1,16 @@
+Package: alckmin-quarto-site
+Type: Website
+Title: Gustavo Togeiro de Alckmin - Personal Website
+Version: 1.0.0
+Depends: 
+    R (>= 4.1.0)
+Imports:
+    ggplot2,
+    dplyr,
+    knitr,
+    rmarkdown
+Suggests:
+    plotly,
+    DT,
+    htmlwidgets
+Encoding: UTF-8

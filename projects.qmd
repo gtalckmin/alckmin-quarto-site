@@ -1,0 +1,294 @@
+---
+title: "Projects"
+---
+
+::: {.container}
+# Research Projects & Portfolio
+
+Explore my current and past research projects, ranging from cutting-edge remote sensing applications to machine learning implementations in agriculture.
+
+::: {.project-filters .text-center .mb-4}
+[All Projects](#){.btn .btn-outline-primary .filter-btn data-filter="all"}
+[Academic Research](#){.btn .btn-outline-secondary .filter-btn data-filter="academic"}
+[Professional Work](#){.btn .btn-outline-success .filter-btn data-filter="professional"}
+[Learning & Development](#){.btn .btn-outline-info .filter-btn data-filter="learning"}
+:::
+
+::: {.row .g-4}
+
+::: {.col-lg-6 .project-item}
+::: {.project-card .h-100}
+### Google Earth Engine (GEE) Applications
+::: {.project-meta}
+**Role:** Developer | **Timeline:** March 2018 - Present
+:::
+
+Advanced satellite imagery analysis and remote sensing applications using Google Earth Engine for agricultural monitoring and biomass estimation.
+
+**Key Features:**
+- Satellite-based time-series analysis
+- Biomass estimation algorithms
+- Agricultural monitoring dashboards
+- Cloud-based processing workflows
+
+::: {.project-tags}
+[Professional]{.badge .bg-primary}
+[Academic]{.badge .bg-secondary}
+[Remote Sensing]{.badge .bg-success}
+:::
+
+::: {.project-links .mt-3}
+[Learn More](#){.btn .btn-sm .btn-outline-primary}
+:::
+:::
+:::
+
+::: {.col-lg-6 .project-item}
+::: {.project-card .h-100}
+### PhD Thesis: Spectral Data Analytics
+::: {.project-meta}
+**Role:** PhD Candidate | **Timeline:** May 2016 - May 2021
+:::
+
+*"From field to airborne spectroscopy – advancing spectral data analytics for accurate retrieval of perennial ryegrass biomass and feed quality."*
+
+**Research Contributions:**
+- Novel spectroscopy techniques for biomass assessment
+- Advanced data analytics for agricultural applications
+- Integration of field and airborne sensing methods
+- Feed quality prediction algorithms
+
+::: {.project-tags}
+[Academic]{.badge .bg-secondary}
+[Research]{.badge .bg-info}
+[Machine Learning]{.badge .bg-warning}
+:::
+
+::: {.project-links .mt-3}
+[View Thesis](https://doi.org/10.18174/544521){.btn .btn-sm .btn-outline-primary target="_blank"}
+:::
+:::
+:::
+
+::: {.col-lg-6 .project-item}
+::: {.project-card .h-100}
+### Canopy Height Sensing System
+::: {.project-meta}
+**Role:** Lead Developer | **Timeline:** August 2021 - Present
+:::
+
+Development of innovative canopy-height sensors and web-based applications for precision pasture management at the University of Missouri.
+
+**Technical Features:**
+- Real-time sensor data collection
+- Web-based dashboard interface
+- Data visualization and analytics
+- Integration with farm management systems
+
+::: {.project-tags}
+[Professional]{.badge .bg-primary}
+[IoT]{.badge .bg-success}
+[Web Development]{.badge .bg-info}
+:::
+
+::: {.project-links .mt-3}
+[Project Details](#){.btn .btn-sm .btn-outline-primary}
+:::
+:::
+:::
+
+::: {.col-lg-6 .project-item}
+::: {.project-card .h-100}
+### Data Science Specialization
+::: {.project-meta}
+**Role:** Student | **Timeline:** June 2017 - Completed
+:::
+
+Comprehensive data science training through Coursera's Data Science Specialization offered by Johns Hopkins University.
+
+**Skills Acquired:**
+- Statistical analysis and modeling
+- Data visualization with R
+- Machine learning algorithms
+- Reproducible research practices
+- Data product development
+
+::: {.project-tags}
+[Learning]{.badge .bg-info}
+[Data Science]{.badge .bg-warning}
+[Professional Development]{.badge .bg-primary}
+:::
+
+::: {.project-links .mt-3}
+[View Certificate](https://www.coursera.org/specializations/jhu-data-science){.btn .btn-sm .btn-outline-primary target="_blank"}
+:::
+:::
+:::
+
+::: {.col-lg-6 .project-item}
+::: {.project-card .h-100}
+### Satellite Time-Series Analysis
+::: {.project-meta}
+**Role:** Research Scientist | **Timeline:** 2021 - Present
+:::
+
+Advanced satellite imagery processing for agricultural monitoring using machine learning and statistical modeling techniques.
+
+**Research Focus:**
+- Multi-temporal satellite data analysis
+- Crop growth monitoring algorithms
+- Yield prediction models
+- Climate impact assessment
+
+**Technologies Used:**
+- R Programming
+- Python (scikit-learn, pandas)
+- Google Earth Engine
+- Statistical modeling
+
+::: {.project-tags}
+[Academic]{.badge .bg-secondary}
+[Machine Learning]{.badge .bg-warning}
+[Remote Sensing]{.badge .bg-success}
+:::
+:::
+:::
+
+::: {.col-lg-6 .project-item}
+::: {.project-card .h-100}
+### Agricultural Web Applications
+::: {.project-meta}
+**Role:** Full-Stack Developer | **Timeline:** 2022 - Present
+:::
+
+Development of web-based applications for agricultural data management and visualization, serving farmers and researchers.
+
+**Application Features:**
+- Interactive data dashboards
+- Real-time sensor integration
+- Mobile-responsive design
+- User authentication and data security
+- API development for data access
+
+**Tech Stack:**
+- R Shiny / Quarto
+- JavaScript/HTML/CSS
+- Database integration
+- Cloud deployment
+
+::: {.project-tags}
+[Professional]{.badge .bg-primary}
+[Web Development]{.badge .bg-info}
+[Full-Stack]{.badge .bg-success}
+:::
+:::
+:::
+
+:::
+
+---
+
+## Current Research Focus
+
+My ongoing research at the University of Missouri focuses on:
+
+::: {.row .g-4 .mt-4}
+::: {.col-md-4}
+::: {.research-focus}
+### Remote Sensing Innovation
+Developing next-generation satellite-based monitoring systems for precision agriculture applications.
+:::
+:::
+
+::: {.col-md-4}
+::: {.research-focus}
+### Machine Learning Applications
+Implementing advanced ML algorithms for crop monitoring, yield prediction, and agricultural decision support.
+:::
+:::
+
+::: {.col-md-4}
+::: {.research-focus}
+### Technology Transfer
+Bridging the gap between research and practical applications to benefit farmers and agricultural communities.
+:::
+:::
+:::
+
+---
+
+## Publications & Presentations
+
+My research has been published in peer-reviewed journals and presented at international conferences. Key publications include work on spectral analysis, remote sensing applications, and precision agriculture technologies.
+
+[View Full Publications List →](about.qmd#publications)
+
+:::
+
+<style>
+.project-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-color: #3498db;
+}
+
+.project-card h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.project-meta {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.project-tags {
+  margin: 1rem 0;
+}
+
+.project-tags .badge {
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.project-links {
+  margin-top: auto;
+}
+
+.research-focus {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid #dee2e6;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  height: 100%;
+}
+
+.research-focus h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  margin: 0 0.25rem 0.5rem 0.25rem;
+}
+
+.filter-btn.active {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+  color: white;
+}
+</style>

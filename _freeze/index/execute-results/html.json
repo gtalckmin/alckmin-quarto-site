@@ -1,0 +1,14 @@
+{
+  "hash": "e84f22736e14d2c787a1863ed60aa642",
+  "result": {
+    "markdown": "---\ntitle: \"Welcome\"\npage-layout: custom\ntoc: false\n---\n\n\n::: {.hero-section}\n::: {.container}\n::: {.row .align-items-center}\n::: {.col-md-8}\n# Hi, I am Gustavo Togeiro de Alckmin\n\n## Ag-Tech Professional | Remote Sensing Researcher\n\nI work with Remote Sensing and Machine Learning for Agriculture. I strive to make great quality research and measure grass for a living! 🌱\n\n[Learn More About Me](about.qmd){.btn .btn-light .btn-lg .me-3}\n[View My Projects](projects.qmd){.btn .btn-outline-light .btn-lg}\n:::\n\n::: {.col-md-4 .text-center}\n![](images/author/Gustavo.jpg){.profile-img .img-fluid}\n:::\n:::\n:::\n:::\n\n::: {.container .mt-5}\n## What I Do\n\n::: {.row .g-4}\n::: {.col-md-4}\n::: {.feature-card .h-100}\n::: {.feature-icon}\n\n{{< fa satellite >}}\n\n\n:::\n### Remote Sensing\nDevelopment of satellite-based time-series techniques for biomass estimation and precision agriculture applications.\n:::\n:::\n\n::: {.col-md-4}\n::: {.feature-card .h-100}\n::: {.feature-icon}\n\n{{< fa robot >}}\n\n\n:::\n### Machine Learning\nApplying cutting-edge ML algorithms to agricultural data for improved crop monitoring and yield prediction.\n:::\n:::\n\n::: {.col-md-4}\n::: {.feature-card .h-100}\n::: {.feature-icon}\n\n{{< fa chart-line >}}\n\n\n:::\n### Data Science\nTransforming complex agricultural datasets into actionable insights using R, Python, and advanced analytics.\n:::\n:::\n:::\n:::\n\n::: {.container .mt-5}\n## Latest Research & Projects\n\n::: {.row .g-4}\n::: {.col-md-6}\n::: {.project-preview}\n### Canopy Height Sensing\nDevelopment of innovative canopy-height sensors and web-based applications for precision pasture management.\n\n[Learn More →](projects.qmd)\n:::\n:::\n\n::: {.col-md-6}\n::: {.project-preview}\n### Satellite Time-Series Analysis\nAdvanced techniques for processing satellite imagery to monitor agricultural systems over time.\n\n[View Project →](projects.qmd)\n:::\n:::\n:::\n:::\n\n::: {.container .mt-5}\n## Skills & Expertise\n\n\n::: {.cell hash='index_cache/html/unnamed-chunk-1_502409cfa8472d9b66c3456d4ade3715'}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n:::\n\n::: {.container .mt-5}\n## Current Position\n\n::: {.position-card}\n**Postdoc Researcher** at **University of Missouri**  \n*August 2021 - Present*\n\n- Development of Remote Sensing Techniques, particularly satellite-based time-series, for biomass estimation\n- Development of canopy-height sensor and web-based applications  \n- Scientific Writing and Publication\n\n[View Full Experience →](experience.qmd)\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
