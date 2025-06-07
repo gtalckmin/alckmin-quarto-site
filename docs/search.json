@@ -35,6 +35,76 @@
     "text": "I believe in the power of technology to transform agriculture and make farming more efficient, sustainable, and productive. My work bridges the gap between cutting-edge research and practical applications that can directly benefit farmers and agricultural communities.\n\n\n\nFeel free to reach out if you’d like to collaborate on research, discuss agricultural technology, or learn more about my work.\nEmail: gustavo.togeirodealckmin@missouri.edu\nCurrent Position: Postdoc Researcher\nInstitution: University of Missouri\nDepartment: Missouri Forage and Livestock Program"
   },
   {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Explore my current and past research projects, ranging from cutting-edge remote sensing applications to machine learning implementations in agriculture.\n\nAll Projects Academic Research Professional Work Learning & Development\n\n\n\n\n\n\nRole: Developer | Timeline: March 2018 - Present\n\nAdvanced satellite imagery analysis and remote sensing applications using Google Earth Engine for agricultural monitoring and biomass estimation.\nKey Features: - Satellite-based time-series analysis - Biomass estimation algorithms - Agricultural monitoring dashboards - Cloud-based processing workflows\n\nProfessional Academic Remote Sensing\n\n\nLearn More\n\n\n\n\n\n\n\nRole: PhD Candidate | Timeline: May 2016 - May 2021\n\n“From field to airborne spectroscopy – advancing spectral data analytics for accurate retrieval of perennial ryegrass biomass and feed quality.”\nResearch Contributions: - Novel spectroscopy techniques for biomass assessment - Advanced data analytics for agricultural applications - Integration of field and airborne sensing methods - Feed quality prediction algorithms\n\nAcademic Research Machine Learning\n\n\nView Thesis\n\n\n\n\n\n\n\nRole: Lead Developer | Timeline: August 2021 - Present\n\nDevelopment of innovative canopy-height sensors and web-based applications for precision pasture management at the University of Missouri.\nTechnical Features: - Real-time sensor data collection - Web-based dashboard interface - Data visualization and analytics - Integration with farm management systems\n\nProfessional IoT Web Development\n\n\nProject Details\n\n\n\n\n\n\n\nRole: Student | Timeline: June 2017 - Completed\n\nComprehensive data science training through Coursera’s Data Science Specialization offered by Johns Hopkins University.\nSkills Acquired: - Statistical analysis and modeling - Data visualization with R - Machine learning algorithms - Reproducible research practices - Data product development\n\nLearning Data Science Professional Development\n\n\nView Certificate\n\n\n\n\n\n\n\nRole: Research Scientist | Timeline: 2021 - Present\n\nAdvanced satellite imagery processing for agricultural monitoring using machine learning and statistical modeling techniques.\nResearch Focus: - Multi-temporal satellite data analysis - Crop growth monitoring algorithms - Yield prediction models - Climate impact assessment\nTechnologies Used: - R Programming - Python (scikit-learn, pandas) - Google Earth Engine - Statistical modeling\n\nAcademic Machine Learning Remote Sensing\n\n\n\n\n\n\n\nRole: Full-Stack Developer | Timeline: 2022 - Present\n\nDevelopment of web-based applications for agricultural data management and visualization, serving farmers and researchers.\nApplication Features: - Interactive data dashboards - Real-time sensor integration - Mobile-responsive design - User authentication and data security - API development for data access\nTech Stack: - R Shiny / Quarto - JavaScript/HTML/CSS - Database integration - Cloud deployment\n\nProfessional Web Development Full-Stack\n\n\n\n\n\n\n\nMy ongoing research at the University of Missouri focuses on:\n\n\n\n\nDeveloping next-generation satellite-based monitoring systems for precision agriculture applications.\n\n\n\n\n\nImplementing advanced ML algorithms for crop monitoring, yield prediction, and agricultural decision support.\n\n\n\n\n\nBridging the gap between research and practical applications to benefit farmers and agricultural communities.\n\n\n\n\n\n\n\nMy research has been published in peer-reviewed journals and presented at international conferences. Key publications include work on spectral analysis, remote sensing applications, and precision agriculture technologies.\nView Full Publications List →"
+  },
+  {
+    "objectID": "projects.html#current-research-focus",
+    "href": "projects.html#current-research-focus",
+    "title": "Projects",
+    "section": "",
+    "text": "My ongoing research at the University of Missouri focuses on:\n\n\n\n\nDeveloping next-generation satellite-based monitoring systems for precision agriculture applications.\n\n\n\n\n\nImplementing advanced ML algorithms for crop monitoring, yield prediction, and agricultural decision support.\n\n\n\n\n\nBridging the gap between research and practical applications to benefit farmers and agricultural communities."
+  },
+  {
+    "objectID": "projects.html#publications-presentations",
+    "href": "projects.html#publications-presentations",
+    "title": "Projects",
+    "section": "",
+    "text": "My research has been published in peer-reviewed journals and presented at international conferences. Key publications include work on spectral analysis, remote sensing applications, and precision agriculture technologies.\nView Full Publications List →"
+  },
+  {
+    "objectID": "posts/hello-r-markdown/index.html",
+    "href": "posts/hello-r-markdown/index.html",
+    "title": "Hello R Markdown",
+    "section": "",
+    "text": "This is an R Markdown document demonstrating the power of literate programming. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nR Markdown has been instrumental in my research workflow, allowing me to combine code, analysis, and narrative in a single document. This is particularly valuable in agricultural research where reproducibility and transparency are crucial.\n\n\nYou can embed an R code chunk like this:\n\n\nCode\n# Load necessary libraries\nlibrary(ggplot2)\n\n# Examine the built-in cars dataset\nsummary(cars)\n\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  \n\n\nCode\n# Fit a linear model\nfit &lt;- lm(dist ~ speed, data = cars)\nsummary(fit)\n\n\n\nCall:\nlm(formula = dist ~ speed, data = cars)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-29.069  -9.525  -2.272   9.215  43.201 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -17.5791     6.7584  -2.601   0.0123 *  \nspeed         3.9324     0.4155   9.464 1.49e-12 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.38 on 48 degrees of freedom\nMultiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 \nF-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12\n\n\nThe relationship between speed and stopping distance is clearly non-linear, which is typical in many agricultural and physical processes I work with in my remote sensing research.\n\n\n\nLet’s create a more informative plot than the original:\n\n\nCode\nggplot(cars, aes(x = speed, y = dist)) +\n  geom_point(color = \"#2c3e50\", size = 3, alpha = 0.7) +\n  geom_smooth(method = \"lm\", color = \"#3498db\", fill = \"#3498db\", alpha = 0.2) +\n  labs(\n    title = \"Car Speed vs Stopping Distance\",\n    x = \"Speed (mph)\",\n    y = \"Stopping Distance (ft)\",\n    subtitle = \"Linear relationship with considerable variation\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(size = 14, face = \"bold\"),\n    plot.subtitle = element_text(size = 12, color = \"gray60\"),\n    axis.title = element_text(size = 12),\n    panel.grid.minor = element_blank()\n  )\n\n\n\n\n\nFigure 1: Relationship between speed and stopping distance\n\n\n\n\n\n\n\nYou can also embed traditional R plots. Here’s the classic pie chart example:\n\n\nCode\npar(mar = c(0, 1, 0, 1))\npie(\n  c(280, 60, 20),\n  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),\n  col = c('#0292D8', '#F7EA39', '#C4B632'),\n  init.angle = -50, \n  border = NA\n)\n\n\n\n\n\nFigure 2: A fancy pie chart demonstrating traditional R graphics\n\n\n\n\n\n\n\nIn my work with remote sensing and agricultural data, R Markdown serves several important purposes:\n\nReproducible Analysis: All analysis steps are documented and can be re-run\nTransparent Methods: Code is visible alongside results and interpretation\nEfficient Report Generation: Same document can produce multiple output formats\nVersion Control: Text-based format works well with Git for tracking changes\n\nThis approach has been invaluable in my PhD research and current postdoc work, where reproducibility and transparency are essential for scientific credibility.\n\n\n\nWhile R Markdown has served the community well, I’m now transitioning to Quarto (which powers this website) as it offers:\n\nBetter multi-language support (R, Python, Julia)\nMore flexible output formats\nEnhanced web publishing capabilities\nImproved visual editor\n\nThe principles remain the same: combining code, analysis, and narrative for reproducible research.\n\nThis post demonstrates the evolution of my documentation and analysis workflow from traditional R Markdown to modern Quarto publishing."
+  },
+  {
+    "objectID": "posts/hello-r-markdown/index.html#embedding-r-code",
+    "href": "posts/hello-r-markdown/index.html#embedding-r-code",
+    "title": "Hello R Markdown",
+    "section": "",
+    "text": "You can embed an R code chunk like this:\n\n\nCode\n# Load necessary libraries\nlibrary(ggplot2)\n\n# Examine the built-in cars dataset\nsummary(cars)\n\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00  \n\n\nCode\n# Fit a linear model\nfit &lt;- lm(dist ~ speed, data = cars)\nsummary(fit)\n\n\n\nCall:\nlm(formula = dist ~ speed, data = cars)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-29.069  -9.525  -2.272   9.215  43.201 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -17.5791     6.7584  -2.601   0.0123 *  \nspeed         3.9324     0.4155   9.464 1.49e-12 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.38 on 48 degrees of freedom\nMultiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 \nF-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12\n\n\nThe relationship between speed and stopping distance is clearly non-linear, which is typical in many agricultural and physical processes I work with in my remote sensing research."
+  },
+  {
+    "objectID": "posts/hello-r-markdown/index.html#creating-visualizations",
+    "href": "posts/hello-r-markdown/index.html#creating-visualizations",
+    "title": "Hello R Markdown",
+    "section": "",
+    "text": "Let’s create a more informative plot than the original:\n\n\nCode\nggplot(cars, aes(x = speed, y = dist)) +\n  geom_point(color = \"#2c3e50\", size = 3, alpha = 0.7) +\n  geom_smooth(method = \"lm\", color = \"#3498db\", fill = \"#3498db\", alpha = 0.2) +\n  labs(\n    title = \"Car Speed vs Stopping Distance\",\n    x = \"Speed (mph)\",\n    y = \"Stopping Distance (ft)\",\n    subtitle = \"Linear relationship with considerable variation\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(size = 14, face = \"bold\"),\n    plot.subtitle = element_text(size = 12, color = \"gray60\"),\n    axis.title = element_text(size = 12),\n    panel.grid.minor = element_blank()\n  )\n\n\n\n\n\nFigure 1: Relationship between speed and stopping distance"
+  },
+  {
+    "objectID": "posts/hello-r-markdown/index.html#including-traditional-plots",
+    "href": "posts/hello-r-markdown/index.html#including-traditional-plots",
+    "title": "Hello R Markdown",
+    "section": "",
+    "text": "You can also embed traditional R plots. Here’s the classic pie chart example:\n\n\nCode\npar(mar = c(0, 1, 0, 1))\npie(\n  c(280, 60, 20),\n  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),\n  col = c('#0292D8', '#F7EA39', '#C4B632'),\n  init.angle = -50, \n  border = NA\n)\n\n\n\n\n\nFigure 2: A fancy pie chart demonstrating traditional R graphics"
+  },
+  {
+    "objectID": "posts/hello-r-markdown/index.html#relevance-to-agricultural-research",
+    "href": "posts/hello-r-markdown/index.html#relevance-to-agricultural-research",
+    "title": "Hello R Markdown",
+    "section": "",
+    "text": "In my work with remote sensing and agricultural data, R Markdown serves several important purposes:\n\nReproducible Analysis: All analysis steps are documented and can be re-run\nTransparent Methods: Code is visible alongside results and interpretation\nEfficient Report Generation: Same document can produce multiple output formats\nVersion Control: Text-based format works well with Git for tracking changes\n\nThis approach has been invaluable in my PhD research and current postdoc work, where reproducibility and transparency are essential for scientific credibility."
+  },
+  {
+    "objectID": "posts/hello-r-markdown/index.html#modern-alternatives",
+    "href": "posts/hello-r-markdown/index.html#modern-alternatives",
+    "title": "Hello R Markdown",
+    "section": "",
+    "text": "While R Markdown has served the community well, I’m now transitioning to Quarto (which powers this website) as it offers:\n\nBetter multi-language support (R, Python, Julia)\nMore flexible output formats\nEnhanced web publishing capabilities\nImproved visual editor\n\nThe principles remain the same: combining code, analysis, and narrative for reproducible research.\n\nThis post demonstrates the evolution of my documentation and analysis workflow from traditional R Markdown to modern Quarto publishing."
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Welcome to my blog! Here I share insights about remote sensing, agricultural technology, data science, and my research journey.\nExplore posts about cutting-edge research, technical tutorials, and thoughts on the intersection of technology and agriculture.\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Hugo to Quarto: A Migration Journey\n\n\n\nWeb Development\n\n\nQuarto\n\n\nHugo\n\n\n\nMy experience migrating from Hugo/Toha theme to Quarto for a more integrated research workflow\n\n\n\nGustavo Togeiro de Alckmin\n\n\nJun 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRemote Sensing for Precision Agriculture\n\n\n\nRemote Sensing\n\n\nAgriculture\n\n\nResearch\n\n\n\nHow satellite-based remote sensing is revolutionizing modern agriculture\n\n\n\nGustavo Togeiro de Alckmin\n\n\nMar 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHello R Markdown\n\n\n\nR\n\n\nData Science\n\n\n\nAn introduction to R Markdown and its capabilities for reproducible research\n\n\n\nGustavo Togeiro de Alckmin\n\n\nJul 23, 2015\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "index.html#ag-tech-professional-remote-sensing-researcher",
     "href": "index.html#ag-tech-professional-remote-sensing-researcher",
     "title": "Welcome",
@@ -67,14 +137,259 @@
     "href": "index.html#current-position",
     "title": "Welcome",
     "section": "Current Position",
-    "text": "Current Position\n\nPostdoc Researcher at University of Missouri\nAugust 2021 - Present\n\nDevelopment of Remote Sensing Techniques, particularly satellite-based time-series, for biomass estimation\nDevelopment of canopy-height sensor and web-based applications\n\nScientific Writing and Publication\n\nView Full Experience →"
+    "text": "Current Position\n\n\nLecturer at University of Western Australia\nPerth, WA, Australia\nJanuary 2024 - Present\n\nCourse development and delivery in agricultural technology\nStudent supervision and mentoring\nResearch supervision and collaboration\n\nView Full Experience →"
+  },
+  {
+    "objectID": "SETUP_COMPLETE.html",
+    "href": "SETUP_COMPLETE.html",
+    "title": "🚀 Your Quarto Website is Ready!",
+    "section": "",
+    "text": "✅ Created new Quarto website in /home/gtalckmin/alckmin-quarto-site\n✅ Migrated content from your Hugo/Toha site including:\n\nPersonal information and bio\nProfessional experience timeline\nSkills and expertise\nProject portfolio\nBlog posts (migrated + new ones)\n\n✅ Modern Bootstrap theme with custom styling\n✅ Responsive design that works on all devices\n✅ GitHub Actions workflow for automatic deployment\n✅ Successfully built and tested the site locally\n\n\n\n\n\n\n\nGo to GitHub.com\nRepository name: alckmin-quarto-site\nDescription: Personal academic website built with Quarto - Remote Sensing & Agriculture Research\nMake it Public ✅\nDon’t initialize with README (we already have one)\nClick “Create repository”\n\n\n\n\ncd /home/gtalckmin/alckmin-quarto-site\n\n# Add your GitHub repository as remote\ngit remote add origin https://github.com/gtalckmin/alckmin-quarto-site.git\n\n# Push to GitHub\ngit branch -M main\ngit push -u origin main\n\n\n\n\nGo to your repository → Settings tab\nLeft sidebar → Pages\nSource: Select “GitHub Actions” ✅\nSave\n\n\n\n\nThe GitHub Action will automatically: - Install Quarto and R - Install required R packages - Build your site - Deploy to GitHub Pages\n\n\n\nYour website will be available at: https://gtalckmin.github.io/alckmin-quarto-site\n\n\n\n\n\n\n\nProfessional hero section with your photo\nSkills visualization (auto-generated from R)\nFeature cards for your expertise areas\nLinks to all sections\n\n\n\n\n\nPersonal background and research interests\nInteractive skills chart\nSocial media links\nProfessional contact information\n\n\n\n\n\nProfessional timeline with all positions\nUniversity of Missouri (current)\nPhD journey\nAB Ag Imagery startup\nCzarnikow trading experience\n\n\n\n\n\nGoogle Earth Engine applications\nPhD thesis research\nCanopy height sensing system\nData science specialization\nAgricultural web applications\n\n\n\n\n\nMigrated R Markdown post\nRemote sensing for agriculture article\nHugo to Quarto migration story\nAll with embedded R code and visualizations\n\n\n\n\n\n\n\nEdit custom.scss to change: - Primary colors: Currently blue/dark blue theme - Typography: Inter font family - Component styling\n\n\n\n\nEdit any .qmd file and push to GitHub\nSite rebuilds automatically\nNo need to manually deploy\n\n\n\n\nCreate: posts/your-post-title/index.qmd\n---\ntitle: \"Your Post Title\"\ndate: \"2025-06-05\"\ncategories: [\"Research\", \"Remote Sensing\"]\ntags: [\"agriculture\", \"data science\"]\ndescription: \"Brief description\"\n---\n\nYour content here with R code blocks!\n\n\n\n\n\nQuarto: Static site generator with computational capabilities\nBootstrap 5: Modern CSS framework\nR Integration: Live code execution and visualization\nGitHub Actions: Automated CI/CD pipeline\nGitHub Pages: Free hosting\n\n\n\n\n\n\n\nCheck GitHub Actions tab for error logs\nCommon issues: Missing R packages (add to DESCRIPTION)\n\n\n\n\n\nCheck that you pushed to main branch\nGitHub Actions must complete successfully\nClear browser cache\n\n\n\n\n\nCheck DEPLOYMENT.md for detailed instructions\nGitHub Actions logs show specific errors\nLocal testing: quarto render and quarto preview\n\n\n\n\n\nYour academic website is now ready to showcase your research in remote sensing, agriculture technology, and data science. The integration with R allows you to embed live analysis and visualizations directly in your content.\nNext Action: Follow the GitHub setup steps above to go live! 🚀"
+  },
+  {
+    "objectID": "SETUP_COMPLETE.html#what-weve-accomplished",
+    "href": "SETUP_COMPLETE.html#what-weve-accomplished",
+    "title": "🚀 Your Quarto Website is Ready!",
+    "section": "",
+    "text": "✅ Created new Quarto website in /home/gtalckmin/alckmin-quarto-site\n✅ Migrated content from your Hugo/Toha site including:\n\nPersonal information and bio\nProfessional experience timeline\nSkills and expertise\nProject portfolio\nBlog posts (migrated + new ones)\n\n✅ Modern Bootstrap theme with custom styling\n✅ Responsive design that works on all devices\n✅ GitHub Actions workflow for automatic deployment\n✅ Successfully built and tested the site locally"
+  },
+  {
+    "objectID": "SETUP_COMPLETE.html#next-steps-to-go-live",
+    "href": "SETUP_COMPLETE.html#next-steps-to-go-live",
+    "title": "🚀 Your Quarto Website is Ready!",
+    "section": "",
+    "text": "Go to GitHub.com\nRepository name: alckmin-quarto-site\nDescription: Personal academic website built with Quarto - Remote Sensing & Agriculture Research\nMake it Public ✅\nDon’t initialize with README (we already have one)\nClick “Create repository”\n\n\n\n\ncd /home/gtalckmin/alckmin-quarto-site\n\n# Add your GitHub repository as remote\ngit remote add origin https://github.com/gtalckmin/alckmin-quarto-site.git\n\n# Push to GitHub\ngit branch -M main\ngit push -u origin main\n\n\n\n\nGo to your repository → Settings tab\nLeft sidebar → Pages\nSource: Select “GitHub Actions” ✅\nSave\n\n\n\n\nThe GitHub Action will automatically: - Install Quarto and R - Install required R packages - Build your site - Deploy to GitHub Pages\n\n\n\nYour website will be available at: https://gtalckmin.github.io/alckmin-quarto-site"
+  },
+  {
+    "objectID": "SETUP_COMPLETE.html#site-features",
+    "href": "SETUP_COMPLETE.html#site-features",
+    "title": "🚀 Your Quarto Website is Ready!",
+    "section": "",
+    "text": "Professional hero section with your photo\nSkills visualization (auto-generated from R)\nFeature cards for your expertise areas\nLinks to all sections\n\n\n\n\n\nPersonal background and research interests\nInteractive skills chart\nSocial media links\nProfessional contact information\n\n\n\n\n\nProfessional timeline with all positions\nUniversity of Missouri (current)\nPhD journey\nAB Ag Imagery startup\nCzarnikow trading experience\n\n\n\n\n\nGoogle Earth Engine applications\nPhD thesis research\nCanopy height sensing system\nData science specialization\nAgricultural web applications\n\n\n\n\n\nMigrated R Markdown post\nRemote sensing for agriculture article\nHugo to Quarto migration story\nAll with embedded R code and visualizations"
+  },
+  {
+    "objectID": "SETUP_COMPLETE.html#customization-options",
+    "href": "SETUP_COMPLETE.html#customization-options",
+    "title": "🚀 Your Quarto Website is Ready!",
+    "section": "",
+    "text": "Edit custom.scss to change: - Primary colors: Currently blue/dark blue theme - Typography: Inter font family - Component styling\n\n\n\n\nEdit any .qmd file and push to GitHub\nSite rebuilds automatically\nNo need to manually deploy\n\n\n\n\nCreate: posts/your-post-title/index.qmd\n---\ntitle: \"Your Post Title\"\ndate: \"2025-06-05\"\ncategories: [\"Research\", \"Remote Sensing\"]\ntags: [\"agriculture\", \"data science\"]\ndescription: \"Brief description\"\n---\n\nYour content here with R code blocks!"
+  },
+  {
+    "objectID": "SETUP_COMPLETE.html#technical-stack",
+    "href": "SETUP_COMPLETE.html#technical-stack",
+    "title": "🚀 Your Quarto Website is Ready!",
+    "section": "",
+    "text": "Quarto: Static site generator with computational capabilities\nBootstrap 5: Modern CSS framework\nR Integration: Live code execution and visualization\nGitHub Actions: Automated CI/CD pipeline\nGitHub Pages: Free hosting"
+  },
+  {
+    "objectID": "SETUP_COMPLETE.html#troubleshooting",
+    "href": "SETUP_COMPLETE.html#troubleshooting",
+    "title": "🚀 Your Quarto Website is Ready!",
+    "section": "",
+    "text": "Check GitHub Actions tab for error logs\nCommon issues: Missing R packages (add to DESCRIPTION)\n\n\n\n\n\nCheck that you pushed to main branch\nGitHub Actions must complete successfully\nClear browser cache\n\n\n\n\n\nCheck DEPLOYMENT.md for detailed instructions\nGitHub Actions logs show specific errors\nLocal testing: quarto render and quarto preview"
+  },
+  {
+    "objectID": "SETUP_COMPLETE.html#ready-to-launch",
+    "href": "SETUP_COMPLETE.html#ready-to-launch",
+    "title": "🚀 Your Quarto Website is Ready!",
+    "section": "",
+    "text": "Your academic website is now ready to showcase your research in remote sensing, agriculture technology, and data science. The integration with R allows you to embed live analysis and visualizations directly in your content.\nNext Action: Follow the GitHub setup steps above to go live! 🚀"
+  },
+  {
+    "objectID": "DEPLOYMENT.html",
+    "href": "DEPLOYMENT.html",
+    "title": "Deployment Instructions",
+    "section": "",
+    "text": "Go to https://github.com/new\nRepository name: alckmin-quarto-site\nDescription: Personal academic website built with Quarto\nMake it Public (required for free GitHub Pages)\nDon’t initialize with README (we already have one)\nClick “Create repository”\n\n\n\n\ncd /home/gtalckmin/alckmin-quarto-site\n\n# Add remote repository (replace with your GitHub username)\ngit remote add origin https://github.com/gtalckmin/alckmin-quarto-site.git\n\n# Push to GitHub\ngit branch -M main\ngit push -u origin main\n\n\n\n\nGo to your repository on GitHub\nClick Settings tab\nScroll to Pages section (left sidebar)\nUnder Source, select GitHub Actions\nThe workflow will run automatically on next push\n\n\n\n\nYour site will be available at: https://gtalckmin.github.io/alckmin-quarto-site\n\n\n\nIf you have a custom domain:\n\nIn repository settings → Pages\nAdd your custom domain\nCreate a CNAME file in the root:\n\necho \"yourdomain.com\" &gt; CNAME\ngit add CNAME\ngit commit -m \"Add custom domain\"\ngit push\n\n\n\n\n\n\nCreate new file: posts/your-post-title/index.qmd\nAdd frontmatter with title, date, categories, tags\nWrite content with embedded R code if needed\nCommit and push - site rebuilds automatically\n\n\n\n\n\nEdit any .qmd file\nCommit and push changes\nGitHub Actions will rebuild and deploy automatically\n\n\n\n\n# Preview locally\nquarto preview\n\n# Build locally\nquarto render\n\n# Check for issues\nquarto check\n\n\n\n\n\n\n\nCheck GitHub Actions logs for specific errors\nEnsure R packages are installed (add to workflow if needed)\nValidate YAML frontmatter in posts\n\n\n\n\n\nEdit custom.scss for theme customization\nModify styles.css for additional styling\nCheck Bootstrap documentation for classes\n\n\n\n\n\nTest locally with quarto render\nEnsure required packages are listed in workflow\nUse #| eval: false to skip problematic code blocks"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#step-1-create-github-repository",
+    "href": "DEPLOYMENT.html#step-1-create-github-repository",
+    "title": "Deployment Instructions",
+    "section": "",
+    "text": "Go to https://github.com/new\nRepository name: alckmin-quarto-site\nDescription: Personal academic website built with Quarto\nMake it Public (required for free GitHub Pages)\nDon’t initialize with README (we already have one)\nClick “Create repository”"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#step-2-push-to-github",
+    "href": "DEPLOYMENT.html#step-2-push-to-github",
+    "title": "Deployment Instructions",
+    "section": "",
+    "text": "cd /home/gtalckmin/alckmin-quarto-site\n\n# Add remote repository (replace with your GitHub username)\ngit remote add origin https://github.com/gtalckmin/alckmin-quarto-site.git\n\n# Push to GitHub\ngit branch -M main\ngit push -u origin main"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#step-3-enable-github-pages",
+    "href": "DEPLOYMENT.html#step-3-enable-github-pages",
+    "title": "Deployment Instructions",
+    "section": "",
+    "text": "Go to your repository on GitHub\nClick Settings tab\nScroll to Pages section (left sidebar)\nUnder Source, select GitHub Actions\nThe workflow will run automatically on next push"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#step-4-access-your-site",
+    "href": "DEPLOYMENT.html#step-4-access-your-site",
+    "title": "Deployment Instructions",
+    "section": "",
+    "text": "Your site will be available at: https://gtalckmin.github.io/alckmin-quarto-site"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#step-5-custom-domain-optional",
+    "href": "DEPLOYMENT.html#step-5-custom-domain-optional",
+    "title": "Deployment Instructions",
+    "section": "",
+    "text": "If you have a custom domain:\n\nIn repository settings → Pages\nAdd your custom domain\nCreate a CNAME file in the root:\n\necho \"yourdomain.com\" &gt; CNAME\ngit add CNAME\ngit commit -m \"Add custom domain\"\ngit push"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#maintenance",
+    "href": "DEPLOYMENT.html#maintenance",
+    "title": "Deployment Instructions",
+    "section": "",
+    "text": "Create new file: posts/your-post-title/index.qmd\nAdd frontmatter with title, date, categories, tags\nWrite content with embedded R code if needed\nCommit and push - site rebuilds automatically\n\n\n\n\n\nEdit any .qmd file\nCommit and push changes\nGitHub Actions will rebuild and deploy automatically\n\n\n\n\n# Preview locally\nquarto preview\n\n# Build locally\nquarto render\n\n# Check for issues\nquarto check"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#troubleshooting",
+    "href": "DEPLOYMENT.html#troubleshooting",
+    "title": "Deployment Instructions",
+    "section": "",
+    "text": "Check GitHub Actions logs for specific errors\nEnsure R packages are installed (add to workflow if needed)\nValidate YAML frontmatter in posts\n\n\n\n\n\nEdit custom.scss for theme customization\nModify styles.css for additional styling\nCheck Bootstrap documentation for classes\n\n\n\n\n\nTest locally with quarto render\nEnsure required packages are listed in workflow\nUse #| eval: false to skip problematic code blocks"
+  },
+  {
+    "objectID": "posts/remote-sensing-agriculture/index.html",
+    "href": "posts/remote-sensing-agriculture/index.html",
+    "title": "Remote Sensing for Precision Agriculture",
+    "section": "",
+    "text": "Remote sensing technology has transformed how we monitor and manage agricultural systems. As a researcher working at the intersection of technology and agriculture, I’ve witnessed firsthand how satellite imagery and advanced analytics are revolutionizing farming practices.\n\n\nRemote sensing involves collecting information about agricultural areas without being in direct contact with them. This is typically done using satellites, drones, or aircraft equipped with various sensors that capture different wavelengths of light reflected from crops and soil.\nIn my work at the University of Missouri, I focus on:\n\nBiomass estimation using satellite time-series data\nCrop health monitoring through vegetation indices\nYield prediction using machine learning algorithms\nPrecision agriculture applications for site-specific management\n\n\n\n\n\n\nGoogle Earth Engine has been a game-changer for agricultural remote sensing. It provides:\n\n\nCode\n# Example of GEE workflow in R\nlibrary(rgee)\n\n# Initialize GEE\nee_Initialize()\n\n# Load Sentinel-2 imagery\ns2 &lt;- ee$ImageCollection(\"COPERNICUS/S2_SR\")$\n  filterDate(\"2023-06-01\", \"2023-08-31\")$\n  filterBounds(my_study_area)$\n  filter(ee$Filter$lt(\"CLOUDY_PIXEL_PERCENTAGE\", 20))\n\n# Calculate NDVI\nndvi &lt;- s2$map(function(image) {\n  return(image$normalizedDifference(c(\"B8\", \"B4\"))$rename(\"NDVI\"))\n})\n\n# Get time series for analysis\nndvi_ts &lt;- ndvi$getRegion(my_study_area, 10)\n\n\n\n\n\nThe satellites I commonly work with include:\n\nSentinel-2: High-resolution optical imagery (10-60m)\nLandsat: Long-term historical data (30m)\nMODIS: Daily global coverage (250-1000m)\nPlanet: Very high-resolution commercial imagery (3-5m)\n\n\n\n\n\n\n\nIn my current research, I’m developing systems for:\n\nBiomass quantification: Estimating grass quantity for grazing management\nGrowth rate monitoring: Tracking pasture recovery after grazing\nSeasonal patterns: Understanding long-term vegetation dynamics\n\n\n\n\nRemote sensing enables farmers to:\n\nIdentify stressed areas before visual symptoms appear\nOptimize irrigation and fertilizer application\nPredict yields for planning and marketing\nMonitor crop development throughout the season\n\n\n\n\n\n\n\nOne major challenge in optical remote sensing is cloud cover. I address this by:\n\nUsing time-series approaches with multiple observations\nCombining different satellite systems\nImplementing cloud-masking algorithms\nExploring radar data (Sentinel-1) for cloudy conditions\n\n\n\n\nAccurate remote sensing requires field validation:\n# Example of correlating satellite data with field measurements\nlibrary(ggplot2)\n\nggplot(validation_data, aes(x = satellite_ndvi, y = field_biomass)) +\n  geom_point(alpha = 0.6) +\n  geom_smooth(method = \"lm\") +\n  labs(\n    title = \"Satellite NDVI vs Field Biomass\",\n    x = \"Satellite NDVI\",\n    y = \"Field Biomass (kg/ha)\"\n  ) +\n  theme_minimal()\n\n\n\n\nModern remote sensing increasingly relies on machine learning:\n\n\n\nPredicting continuous variables (biomass, yield)\nUsing multiple spectral bands as predictors\nTime-series analysis for temporal patterns\n\n\n\n\n\nCrop type mapping\nDisease detection\nLand use classification\n\n\n\n\n\nConvolutional neural networks for image analysis\nRecurrent neural networks for time-series\nTransfer learning from large datasets\n\n\n\n\n\nThe field is rapidly evolving with:\n\nHigher spatial and temporal resolution satellites\nHyperspectral imaging for detailed crop analysis\nAI and machine learning integration\nReal-time data processing capabilities\nIntegration with IoT sensors for comprehensive monitoring\n\n\n\n\nFor researchers interested in agricultural remote sensing:\n\nLearn R or Python for data analysis\nExplore Google Earth Engine for satellite data access\nUnderstand basic vegetation indices (NDVI, EVI, etc.)\nPractice with open datasets (Landsat, Sentinel)\nConnect with field measurements for validation\n\n\n\n\nRemote sensing is no longer just a research tool—it’s becoming essential for modern agriculture. As we face challenges of feeding a growing population while managing environmental resources, these technologies offer unprecedented insights into agricultural systems.\nThe integration of satellite data, machine learning, and field expertise is creating new possibilities for precision agriculture that can increase productivity while reducing environmental impact.\n\nWant to learn more about my remote sensing research? Contact me or check out my current projects."
+  },
+  {
+    "objectID": "posts/remote-sensing-agriculture/index.html#what-is-remote-sensing-in-agriculture",
+    "href": "posts/remote-sensing-agriculture/index.html#what-is-remote-sensing-in-agriculture",
+    "title": "Remote Sensing for Precision Agriculture",
+    "section": "",
+    "text": "Remote sensing involves collecting information about agricultural areas without being in direct contact with them. This is typically done using satellites, drones, or aircraft equipped with various sensors that capture different wavelengths of light reflected from crops and soil.\nIn my work at the University of Missouri, I focus on:\n\nBiomass estimation using satellite time-series data\nCrop health monitoring through vegetation indices\nYield prediction using machine learning algorithms\nPrecision agriculture applications for site-specific management"
+  },
+  {
+    "objectID": "posts/remote-sensing-agriculture/index.html#key-technologies-i-work-with",
+    "href": "posts/remote-sensing-agriculture/index.html#key-technologies-i-work-with",
+    "title": "Remote Sensing for Precision Agriculture",
+    "section": "",
+    "text": "Google Earth Engine has been a game-changer for agricultural remote sensing. It provides:\n\n\nCode\n# Example of GEE workflow in R\nlibrary(rgee)\n\n# Initialize GEE\nee_Initialize()\n\n# Load Sentinel-2 imagery\ns2 &lt;- ee$ImageCollection(\"COPERNICUS/S2_SR\")$\n  filterDate(\"2023-06-01\", \"2023-08-31\")$\n  filterBounds(my_study_area)$\n  filter(ee$Filter$lt(\"CLOUDY_PIXEL_PERCENTAGE\", 20))\n\n# Calculate NDVI\nndvi &lt;- s2$map(function(image) {\n  return(image$normalizedDifference(c(\"B8\", \"B4\"))$rename(\"NDVI\"))\n})\n\n# Get time series for analysis\nndvi_ts &lt;- ndvi$getRegion(my_study_area, 10)\n\n\n\n\n\nThe satellites I commonly work with include:\n\nSentinel-2: High-resolution optical imagery (10-60m)\nLandsat: Long-term historical data (30m)\nMODIS: Daily global coverage (250-1000m)\nPlanet: Very high-resolution commercial imagery (3-5m)"
+  },
+  {
+    "objectID": "posts/remote-sensing-agriculture/index.html#real-world-applications",
+    "href": "posts/remote-sensing-agriculture/index.html#real-world-applications",
+    "title": "Remote Sensing for Precision Agriculture",
+    "section": "",
+    "text": "In my current research, I’m developing systems for:\n\nBiomass quantification: Estimating grass quantity for grazing management\nGrowth rate monitoring: Tracking pasture recovery after grazing\nSeasonal patterns: Understanding long-term vegetation dynamics\n\n\n\n\nRemote sensing enables farmers to:\n\nIdentify stressed areas before visual symptoms appear\nOptimize irrigation and fertilizer application\nPredict yields for planning and marketing\nMonitor crop development throughout the season"
+  },
+  {
+    "objectID": "posts/remote-sensing-agriculture/index.html#challenges-and-solutions",
+    "href": "posts/remote-sensing-agriculture/index.html#challenges-and-solutions",
+    "title": "Remote Sensing for Precision Agriculture",
+    "section": "",
+    "text": "One major challenge in optical remote sensing is cloud cover. I address this by:\n\nUsing time-series approaches with multiple observations\nCombining different satellite systems\nImplementing cloud-masking algorithms\nExploring radar data (Sentinel-1) for cloudy conditions\n\n\n\n\nAccurate remote sensing requires field validation:\n# Example of correlating satellite data with field measurements\nlibrary(ggplot2)\n\nggplot(validation_data, aes(x = satellite_ndvi, y = field_biomass)) +\n  geom_point(alpha = 0.6) +\n  geom_smooth(method = \"lm\") +\n  labs(\n    title = \"Satellite NDVI vs Field Biomass\",\n    x = \"Satellite NDVI\",\n    y = \"Field Biomass (kg/ha)\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "posts/remote-sensing-agriculture/index.html#machine-learning-integration",
+    "href": "posts/remote-sensing-agriculture/index.html#machine-learning-integration",
+    "title": "Remote Sensing for Precision Agriculture",
+    "section": "",
+    "text": "Modern remote sensing increasingly relies on machine learning:\n\n\n\nPredicting continuous variables (biomass, yield)\nUsing multiple spectral bands as predictors\nTime-series analysis for temporal patterns\n\n\n\n\n\nCrop type mapping\nDisease detection\nLand use classification\n\n\n\n\n\nConvolutional neural networks for image analysis\nRecurrent neural networks for time-series\nTransfer learning from large datasets"
+  },
+  {
+    "objectID": "posts/remote-sensing-agriculture/index.html#future-directions",
+    "href": "posts/remote-sensing-agriculture/index.html#future-directions",
+    "title": "Remote Sensing for Precision Agriculture",
+    "section": "",
+    "text": "The field is rapidly evolving with:\n\nHigher spatial and temporal resolution satellites\nHyperspectral imaging for detailed crop analysis\nAI and machine learning integration\nReal-time data processing capabilities\nIntegration with IoT sensors for comprehensive monitoring"
+  },
+  {
+    "objectID": "posts/remote-sensing-agriculture/index.html#getting-started",
+    "href": "posts/remote-sensing-agriculture/index.html#getting-started",
+    "title": "Remote Sensing for Precision Agriculture",
+    "section": "",
+    "text": "For researchers interested in agricultural remote sensing:\n\nLearn R or Python for data analysis\nExplore Google Earth Engine for satellite data access\nUnderstand basic vegetation indices (NDVI, EVI, etc.)\nPractice with open datasets (Landsat, Sentinel)\nConnect with field measurements for validation"
+  },
+  {
+    "objectID": "posts/remote-sensing-agriculture/index.html#conclusion",
+    "href": "posts/remote-sensing-agriculture/index.html#conclusion",
+    "title": "Remote Sensing for Precision Agriculture",
+    "section": "",
+    "text": "Remote sensing is no longer just a research tool—it’s becoming essential for modern agriculture. As we face challenges of feeding a growing population while managing environmental resources, these technologies offer unprecedented insights into agricultural systems.\nThe integration of satellite data, machine learning, and field expertise is creating new possibilities for precision agriculture that can increase productivity while reducing environmental impact.\n\nWant to learn more about my remote sensing research? Contact me or check out my current projects."
+  },
+  {
+    "objectID": "posts/hugo-to-quarto-migration/index.html",
+    "href": "posts/hugo-to-quarto-migration/index.html",
+    "title": "From Hugo to Quarto: A Migration Journey",
+    "section": "",
+    "text": "After maintaining my academic website using Hugo with the Toha theme, I recently made the decision to migrate to Quarto. This post documents my journey, the reasons behind the switch, and lessons learned during the migration process.\n\n\nMy original website was built using:\n\nHugo: Fast static site generator\nToha Theme: Beautiful academic portfolio theme\nYAML data files: Structured content management\nGitHub Pages: Free hosting and deployment\n\nThe Hugo setup served me well for several years, providing a professional-looking academic portfolio with sections for about, experience, projects, and blog posts.\n\n\n\nSeveral factors influenced my decision to migrate:\n\n\nAs a researcher working primarily with R, Quarto offers seamless integration:\n\n\nCode\nlibrary(ggplot2)\nlibrary(dplyr)\n\n# Example: Embedding live data analysis in website content\ndata &lt;- data.frame(\n  technology = c(\"Hugo\", \"Quarto\", \"Traditional CMS\"),\n  research_integration = c(2, 10, 1),\n  ease_of_use = c(6, 9, 8)\n)\n\nggplot(data, aes(x = research_integration, y = ease_of_use, \n                 color = technology, size = 3)) +\n  geom_point() +\n  labs(\n    title = \"Technology Comparison for Academic Websites\",\n    x = \"Research Integration (1-10)\",\n    y = \"Ease of Use (1-10)\"\n  ) +\n  theme_minimal() +\n  guides(size = \"none\")\n\n\n\n\n\n\n\n\nWith Quarto, I can now:\n\nWrite blog posts with embedded R code and live results\nCreate presentations from the same content\nGenerate PDFs for academic papers\nMaintain consistent styling across all outputs\n\n\n\n\nQuarto provides:\n\nBetter developer tools and VS Code integration\nLive preview during development\nMore flexible theming options\nBuilt-in Bootstrap integration\n\n\n\n\n\n\n\nThe biggest challenge was converting Hugo’s YAML-based content structure to Quarto’s markdown files:\n# Hugo structure (data/en/sections/about.yaml)\nsection:\n  name: About\n  designation: \"Postdoc Researcher\"\n  company:\n    name: \"University of Missouri\"\n  summary: 'Research summary...'\n  socialLinks:\n    - name: Github\n      icon: \"fab fa-github\"\n      url: \"https://github.com/username\"\nTo Quarto’s integrated markdown:\n---\ntitle: \"About\"\n---\n\n## Background\nResearch summary integrated directly in markdown...\n\n[{{&lt; fa brands github &gt;}} GitHub](https://github.com/username)\n\n\n\nMoving images and static files required:\n\nReorganizing directory structure\nUpdating image references\nConverting icon systems (Font Awesome integration)\nAdapting responsive layouts\n\n\n\n\nTransitioning from Toha’s custom CSS to Bootstrap-based styling:\n\nMaintained visual consistency\nAdapted color schemes and typography\nEnsured mobile responsiveness\nAdded custom SCSS for specific needs\n\n\n\n\n\n\n\n# Create new Quarto project\nmkdir alckmin-quarto-site\ncd alckmin-quarto-site\nquarto create-project . --type website\n\n\n\nI created a systematic approach:\n\nExtracted content from YAML files\nConverted to Quarto markdown format\nReorganized directory structure\nUpdated internal links and references\n\n\n\n\n\nBootstrap theme selection and customization\nSCSS variables for consistent branding\nComponent styling for cards, timelines, etc.\nResponsive design optimization\n\n\n\n\n# GitHub Actions workflow for automatic deployment\nname: Render and Publish\non:\n  push:\n    branches: [main]\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: quarto-dev/quarto-actions/setup@v2\n      - uses: quarto-dev/quarto-actions/render@v2\n      - uses: actions/upload-pages-artifact@v2\n        with:\n          path: docs\n      - uses: actions/deploy-pages@v2\n\n\n\n\n\n\nNow I can:\n\nInclude live R analysis in blog posts\nEmbed interactive visualizations\nMaintain reproducible content\nVersion control everything in one place\n\n\n\n\n\nSingle-source publishing: Same content for web, PDF, presentations\nLive code execution: Results update automatically\nBetter collaboration: Markdown-based content is easier to edit\nVersion control: Git-friendly plain text format\n\n\n\n\nThe new site includes:\n\nInteractive code blocks with copy functionality\nMathematical expressions with KaTeX\nResponsive design that works on all devices\nFast loading with optimized assets\n\n\n\n\n\n\n\n\nContent audit before migration saved time\nAsset inventory helped track all files\nURL mapping maintained SEO value\nBackup strategy provided peace of mind\n\n\n\n\nInstead of a big-bang approach:\n\nSet up parallel development\nMigrate content section by section\nTest thoroughly at each stage\nMaintain old site until confident\n\n\n\n\n\nQuarto documentation is excellent\nCommunity examples provided inspiration\nGitHub discussions helped solve specific issues\nBootstrap themes offered design starting points\n\n\n\n\n\nWith the Quarto foundation in place, I’m planning:\n\nEnhanced data visualizations with Observable JS\nInteractive tutorials using Quarto’s computational features\nAutomated content updates from research databases\nMulti-format publishing for presentations and papers\n\n\n\n\nFor other academics considering a similar migration:\n\n\nConsider Quarto if you:\n\nWork primarily with R, Python, or Julia\nWant integrated computational content\nValue reproducible research workflows\nNeed multiple output formats\n\n\n\n\n\nStart small with a new section or blog\nUse migration tools where available\nTest thoroughly across devices and browsers\nDocument your process for future reference\nBackup everything before starting\n\n\n\n\n\nMigrating from Hugo to Quarto has significantly improved my research workflow and website management experience. While the migration required substantial effort, the benefits of having an integrated platform for research, analysis, and communication make it worthwhile.\nThe ability to embed live code, create reproducible content, and maintain everything in a unified workflow has already enhanced both my research productivity and my ability to share findings with the community.\nFor researchers seeking a modern, integrated approach to academic websites, Quarto represents a compelling choice that bridges the gap between research tools and web publishing.\n\nInterested in learning more about my migration process or Quarto for academic websites? Feel free to reach out with questions!"
+  },
+  {
+    "objectID": "posts/hugo-to-quarto-migration/index.html#my-previous-setup-hugo-toha",
+    "href": "posts/hugo-to-quarto-migration/index.html#my-previous-setup-hugo-toha",
+    "title": "From Hugo to Quarto: A Migration Journey",
+    "section": "",
+    "text": "My original website was built using:\n\nHugo: Fast static site generator\nToha Theme: Beautiful academic portfolio theme\nYAML data files: Structured content management\nGitHub Pages: Free hosting and deployment\n\nThe Hugo setup served me well for several years, providing a professional-looking academic portfolio with sections for about, experience, projects, and blog posts."
+  },
+  {
+    "objectID": "posts/hugo-to-quarto-migration/index.html#why-migrate-to-quarto",
+    "href": "posts/hugo-to-quarto-migration/index.html#why-migrate-to-quarto",
+    "title": "From Hugo to Quarto: A Migration Journey",
+    "section": "",
+    "text": "Several factors influenced my decision to migrate:\n\n\nAs a researcher working primarily with R, Quarto offers seamless integration:\n\n\nCode\nlibrary(ggplot2)\nlibrary(dplyr)\n\n# Example: Embedding live data analysis in website content\ndata &lt;- data.frame(\n  technology = c(\"Hugo\", \"Quarto\", \"Traditional CMS\"),\n  research_integration = c(2, 10, 1),\n  ease_of_use = c(6, 9, 8)\n)\n\nggplot(data, aes(x = research_integration, y = ease_of_use, \n                 color = technology, size = 3)) +\n  geom_point() +\n  labs(\n    title = \"Technology Comparison for Academic Websites\",\n    x = \"Research Integration (1-10)\",\n    y = \"Ease of Use (1-10)\"\n  ) +\n  theme_minimal() +\n  guides(size = \"none\")\n\n\n\n\n\n\n\n\nWith Quarto, I can now:\n\nWrite blog posts with embedded R code and live results\nCreate presentations from the same content\nGenerate PDFs for academic papers\nMaintain consistent styling across all outputs\n\n\n\n\nQuarto provides:\n\nBetter developer tools and VS Code integration\nLive preview during development\nMore flexible theming options\nBuilt-in Bootstrap integration"
+  },
+  {
+    "objectID": "posts/hugo-to-quarto-migration/index.html#migration-challenges",
+    "href": "posts/hugo-to-quarto-migration/index.html#migration-challenges",
+    "title": "From Hugo to Quarto: A Migration Journey",
+    "section": "",
+    "text": "The biggest challenge was converting Hugo’s YAML-based content structure to Quarto’s markdown files:\n# Hugo structure (data/en/sections/about.yaml)\nsection:\n  name: About\n  designation: \"Postdoc Researcher\"\n  company:\n    name: \"University of Missouri\"\n  summary: 'Research summary...'\n  socialLinks:\n    - name: Github\n      icon: \"fab fa-github\"\n      url: \"https://github.com/username\"\nTo Quarto’s integrated markdown:\n---\ntitle: \"About\"\n---\n\n## Background\nResearch summary integrated directly in markdown...\n\n[{{&lt; fa brands github &gt;}} GitHub](https://github.com/username)\n\n\n\nMoving images and static files required:\n\nReorganizing directory structure\nUpdating image references\nConverting icon systems (Font Awesome integration)\nAdapting responsive layouts\n\n\n\n\nTransitioning from Toha’s custom CSS to Bootstrap-based styling:\n\nMaintained visual consistency\nAdapted color schemes and typography\nEnsured mobile responsiveness\nAdded custom SCSS for specific needs"
+  },
+  {
+    "objectID": "posts/hugo-to-quarto-migration/index.html#migration-process",
+    "href": "posts/hugo-to-quarto-migration/index.html#migration-process",
+    "title": "From Hugo to Quarto: A Migration Journey",
+    "section": "",
+    "text": "# Create new Quarto project\nmkdir alckmin-quarto-site\ncd alckmin-quarto-site\nquarto create-project . --type website\n\n\n\nI created a systematic approach:\n\nExtracted content from YAML files\nConverted to Quarto markdown format\nReorganized directory structure\nUpdated internal links and references\n\n\n\n\n\nBootstrap theme selection and customization\nSCSS variables for consistent branding\nComponent styling for cards, timelines, etc.\nResponsive design optimization\n\n\n\n\n# GitHub Actions workflow for automatic deployment\nname: Render and Publish\non:\n  push:\n    branches: [main]\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: quarto-dev/quarto-actions/setup@v2\n      - uses: quarto-dev/quarto-actions/render@v2\n      - uses: actions/upload-pages-artifact@v2\n        with:\n          path: docs\n      - uses: actions/deploy-pages@v2"
+  },
+  {
+    "objectID": "posts/hugo-to-quarto-migration/index.html#results-and-benefits",
+    "href": "posts/hugo-to-quarto-migration/index.html#results-and-benefits",
+    "title": "From Hugo to Quarto: A Migration Journey",
+    "section": "",
+    "text": "Now I can:\n\nInclude live R analysis in blog posts\nEmbed interactive visualizations\nMaintain reproducible content\nVersion control everything in one place\n\n\n\n\n\nSingle-source publishing: Same content for web, PDF, presentations\nLive code execution: Results update automatically\nBetter collaboration: Markdown-based content is easier to edit\nVersion control: Git-friendly plain text format\n\n\n\n\nThe new site includes:\n\nInteractive code blocks with copy functionality\nMathematical expressions with KaTeX\nResponsive design that works on all devices\nFast loading with optimized assets"
+  },
+  {
+    "objectID": "posts/hugo-to-quarto-migration/index.html#lessons-learned",
+    "href": "posts/hugo-to-quarto-migration/index.html#lessons-learned",
+    "title": "From Hugo to Quarto: A Migration Journey",
+    "section": "",
+    "text": "Content audit before migration saved time\nAsset inventory helped track all files\nURL mapping maintained SEO value\nBackup strategy provided peace of mind\n\n\n\n\nInstead of a big-bang approach:\n\nSet up parallel development\nMigrate content section by section\nTest thoroughly at each stage\nMaintain old site until confident\n\n\n\n\n\nQuarto documentation is excellent\nCommunity examples provided inspiration\nGitHub discussions helped solve specific issues\nBootstrap themes offered design starting points"
+  },
+  {
+    "objectID": "posts/hugo-to-quarto-migration/index.html#future-enhancements",
+    "href": "posts/hugo-to-quarto-migration/index.html#future-enhancements",
+    "title": "From Hugo to Quarto: A Migration Journey",
+    "section": "",
+    "text": "With the Quarto foundation in place, I’m planning:\n\nEnhanced data visualizations with Observable JS\nInteractive tutorials using Quarto’s computational features\nAutomated content updates from research databases\nMulti-format publishing for presentations and papers"
+  },
+  {
+    "objectID": "posts/hugo-to-quarto-migration/index.html#recommendations",
+    "href": "posts/hugo-to-quarto-migration/index.html#recommendations",
+    "title": "From Hugo to Quarto: A Migration Journey",
+    "section": "",
+    "text": "For other academics considering a similar migration:\n\n\nConsider Quarto if you:\n\nWork primarily with R, Python, or Julia\nWant integrated computational content\nValue reproducible research workflows\nNeed multiple output formats\n\n\n\n\n\nStart small with a new section or blog\nUse migration tools where available\nTest thoroughly across devices and browsers\nDocument your process for future reference\nBackup everything before starting"
+  },
+  {
+    "objectID": "posts/hugo-to-quarto-migration/index.html#conclusion",
+    "href": "posts/hugo-to-quarto-migration/index.html#conclusion",
+    "title": "From Hugo to Quarto: A Migration Journey",
+    "section": "",
+    "text": "Migrating from Hugo to Quarto has significantly improved my research workflow and website management experience. While the migration required substantial effort, the benefits of having an integrated platform for research, analysis, and communication make it worthwhile.\nThe ability to embed live code, create reproducible content, and maintain everything in a unified workflow has already enhanced both my research productivity and my ability to share findings with the community.\nFor researchers seeking a modern, integrated approach to academic websites, Quarto represents a compelling choice that bridges the gap between research tools and web publishing.\n\nInterested in learning more about my migration process or Quarto for academic websites? Feel free to reach out with questions!"
   },
   {
     "objectID": "experience.html",
     "href": "experience.html",
     "title": "Professional Experience",
     "section": "",
-    "text": "My career spans academia, entrepreneurship, and industry, with a focus on agricultural technology, remote sensing, and data science.\n\n\n\n\n\nUniversity of Missouri | Columbia, MO, United States\n\n\nAugust 2021 - Present\n\nWorking with the Missouri Forage and Livestock Program to develop innovative solutions for precision pasture management.\nKey Responsibilities: - Development of Remote Sensing Techniques, particularly satellite-based time-series, for biomass estimation - Development of canopy-height sensor and web-based applications - Scientific Writing and Publication - Collaboration with interdisciplinary research teams\nResearch Focus: - Satellite imagery analysis for agricultural monitoring - Machine learning applications in precision agriculture - Sensor development for field-based measurements - Web application development for farm management tools\n\n\n\n\n\n\nWageningen University & University of Tasmania | Netherlands & Australia\n\n\nMay 2016 - May 2021\n\nConducted doctoral research focusing on agricultural remote sensing and precision farming technologies.\nKey Responsibilities: - Experimental Design and Research Plan Development - Data Collection and Analysis using advanced statistical methods - Scientific Writing and Publication in peer-reviewed journals - International collaboration between European and Australian institutions\nResearch Achievements: - Developed novel approaches to crop monitoring using satellite data - Advanced understanding of precision agriculture applications - Published research in high-impact agricultural and remote sensing journals\n\n\n\n\n\n\nAB Ag Imagery | São Paulo State, Brazil\n\n\nApril 2014 - August 2015\n\nFounded and led a startup focused on agricultural imagery and remote sensing services.\nKey Responsibilities: - Development of UAV and sensing business plan - Seed Funding acquisition and investor relations - Development of Proposal for R&D of multispectral cameras for agriculture - Business development and client acquisition - Technical product development\nAchievements: - Successfully secured seed funding for agricultural technology startup - Developed innovative UAV-based sensing solutions for Brazilian agriculture - Created business partnerships with agricultural producers - Advanced R&D in multispectral imaging technology\n\n\n\n\n\n\nCzarnikow | São Paulo, SP, Brazil\n\n\nOctober 2010 - August 2011\n\nWorked with a leading international sugar trading company with operations since 1861.\nKey Responsibilities: - Sugar Trading Assistance to Brazil’s Raw Sugar Market - Development of exotic structures for molasses hedging - Business Intelligence for sugar industrial consumers - Market analysis and risk assessment - Client relationship management\nAchievements: - Contributed to Brazil’s raw sugar market operations - Developed innovative financial instruments for agricultural commodities - Provided strategic business intelligence to industrial clients - Gained deep understanding of agricultural commodity markets\n\n\n\n\n\n\nThroughout my career, I’ve continuously developed expertise in:\n\n\n\n\n\nRemote Sensing (100%)\nR Programming (95%)\nPython (80%)\nMachine Learning (85%)\nLaTeX (90%)\nInkscape (85%)\n\n\n\n\n\n\n\nExperimental Design\nStatistical Analysis\nScientific Writing\nData Visualization\nPeer Review Process\nGrant Writing\n\n\n\n\n\n\n\nStartup Management\nBusiness Development\nInvestor Relations\nMarket Analysis\nStrategic Planning\nProject Management\n\n\n\n\n\n\n\nPrecision Agriculture\nAgricultural Commodities\nUAV Technology\nSensor Development\nWeb Applications\nInternational Markets\n\n\n\n\n\n\n\n\nAt the University of Missouri, I’m actively involved in cutting-edge research that combines remote sensing, machine learning, and agricultural applications. My work contributes to:\n\nSustainable Agriculture: Developing tools for more efficient resource use\nPrecision Farming: Creating technology for site-specific crop management\nData-Driven Decisions: Providing farmers with actionable insights\nTechnology Transfer: Bridging research and practical applications\n\nView My Current Projects →"
+    "text": "My career spans academia, entrepreneurship, and industry, with a focus on agricultural technology, remote sensing, and data science.\n\n\n\n\n\nUniversity of Western Australia | Perth, WA, Australia\n\n\nJanuary 2024 - Present\n\nCurrent academic position focusing on agricultural technology and remote sensing education.\nKey Responsibilities: - Course development and delivery in agricultural technology - Student supervision and mentoring - Research supervision and collaboration - Academic program development - Industry engagement and partnerships\nFocus Areas: - Remote sensing applications in agriculture - Precision agriculture technologies - Data science in agricultural systems - Sustainable farming practices\n\n\n\n\n\n\nUniversity of Melbourne | Melbourne, VIC, Australia\n\n\nMay 2022 - February 2023\n\nAcademic position focused on agricultural remote sensing and precision farming technologies.\nKey Responsibilities: - Teaching undergraduate and graduate courses - Research project supervision - Academic curriculum development - Student assessment and evaluation - Collaboration with industry partners\nTeaching Areas: - Agricultural remote sensing - Data analysis and visualization - Precision agriculture systems - Research methodology\n\n\n\n\n\n\nUniversity of Missouri | Columbia, MO, United States\n\n\nAugust 2021 - May 2022\n\nWorking with the Missouri Forage and Livestock Program to develop innovative solutions for precision pasture management.\nKey Responsibilities: - Development of Remote Sensing Techniques, particularly satellite-based time-series, for biomass estimation - Development of canopy-height sensor and web-based applications - Scientific Writing and Publication - Collaboration with interdisciplinary research teams\nResearch Focus: - Satellite imagery analysis for agricultural monitoring - Machine learning applications in precision agriculture - Sensor development for field-based measurements - Web application development for farm management tools\n\n\n\n\n\n\nWageningen University & University of Tasmania | Netherlands & Australia\n\n\nMay 2016 - May 2021\n\nConducted doctoral research focusing on agricultural remote sensing and precision farming technologies.\nKey Responsibilities: - Experimental Design and Research Plan Development - Data Collection and Analysis using advanced statistical methods - Scientific Writing and Publication in peer-reviewed journals - International collaboration between European and Australian institutions\nResearch Achievements: - Developed novel approaches to crop monitoring using satellite data - Advanced understanding of precision agriculture applications - Published research in high-impact agricultural and remote sensing journals\n\n\n\n\n\n\nAB Ag Imagery | São Paulo State, Brazil\n\n\nApril 2014 - August 2015\n\nFounded and led a startup focused on agricultural imagery and remote sensing services.\nKey Responsibilities: - Development of UAV and sensing business plan - Seed Funding acquisition and investor relations - Development of Proposal for R&D of multispectral cameras for agriculture - Business development and client acquisition - Technical product development\nAchievements: - Successfully secured seed funding for agricultural technology startup - Developed innovative UAV-based sensing solutions for Brazilian agriculture - Created business partnerships with agricultural producers - Advanced R&D in multispectral imaging technology\n\n\n\n\n\n\nCzarnikow | São Paulo, SP, Brazil\n\n\nOctober 2010 - August 2011\n\nWorked with a leading international sugar trading company with operations since 1861.\nKey Responsibilities: - Sugar Trading Assistance to Brazil’s Raw Sugar Market - Development of exotic structures for molasses hedging - Business Intelligence for sugar industrial consumers - Market analysis and risk assessment - Client relationship management\nAchievements: - Contributed to Brazil’s raw sugar market operations - Developed innovative financial instruments for agricultural commodities - Provided strategic business intelligence to industrial clients - Gained deep understanding of agricultural commodity markets\n\n\n\n\n\n\nThroughout my career, I’ve continuously developed expertise in:\n\n\n\n\n\nRemote Sensing (100%)\nR Programming (95%)\nPython (80%)\nMachine Learning (85%)\nLaTeX (90%)\nInkscape (85%)\n\n\n\n\n\n\n\nExperimental Design\nStatistical Analysis\nScientific Writing\nData Visualization\nPeer Review Process\nGrant Writing\n\n\n\n\n\n\n\nStartup Management\nBusiness Development\nInvestor Relations\nMarket Analysis\nStrategic Planning\nProject Management\n\n\n\n\n\n\n\nPrecision Agriculture\nAgricultural Commodities\nUAV Technology\nSensor Development\nWeb Applications\nInternational Markets\n\n\n\n\n\n\n\n\nAt the University of Missouri, I’m actively involved in cutting-edge research that combines remote sensing, machine learning, and agricultural applications. My work contributes to:\n\nSustainable Agriculture: Developing tools for more efficient resource use\nPrecision Farming: Creating technology for site-specific crop management\nData-Driven Decisions: Providing farmers with actionable insights\nTechnology Transfer: Bridging research and practical applications\n\nView My Current Projects →"
   },
   {
     "objectID": "experience.html#skills-development-timeline",

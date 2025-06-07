@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Gustavo Togeiro de Alckmin">
+<meta name="dcterms.date" content="2025-06-05">
+<meta name="description" content="My experience migrating from Hugo/Toha theme to Quarto for a more integrated research workflow">
 
-<title>Gustavo Togeiro de Alckmin – index</title>
+<title>Gustavo Togeiro de Alckmin - From Hugo to Quarto: A Migration Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -138,16 +175,371 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-i-migrated-my-website-from-hugo-to-quarto" id="toc-why-i-migrated-my-website-from-hugo-to-quarto" class="nav-link active" data-scroll-target="#why-i-migrated-my-website-from-hugo-to-quarto">Why I Migrated My Website from Hugo to Quarto</a>
+  <ul class="collapse">
+  <li><a href="#my-previous-setup-hugo-toha" id="toc-my-previous-setup-hugo-toha" class="nav-link" data-scroll-target="#my-previous-setup-hugo-toha">My Previous Setup: Hugo + Toha</a></li>
+  <li><a href="#why-migrate-to-quarto" id="toc-why-migrate-to-quarto" class="nav-link" data-scroll-target="#why-migrate-to-quarto">Why Migrate to Quarto?</a>
+  <ul class="collapse">
+  <li><a href="#research-integration" id="toc-research-integration" class="nav-link" data-scroll-target="#research-integration">1. Research Integration</a></li>
+  <li><a href="#unified-workflow" id="toc-unified-workflow" class="nav-link" data-scroll-target="#unified-workflow">2. Unified Workflow</a></li>
+  <li><a href="#modern-development-experience" id="toc-modern-development-experience" class="nav-link" data-scroll-target="#modern-development-experience">3. Modern Development Experience</a></li>
+  </ul></li>
+  <li><a href="#migration-challenges" id="toc-migration-challenges" class="nav-link" data-scroll-target="#migration-challenges">Migration Challenges</a>
+  <ul class="collapse">
+  <li><a href="#content-conversion" id="toc-content-conversion" class="nav-link" data-scroll-target="#content-conversion">Content Conversion</a></li>
+  <li><a href="#asset-migration" id="toc-asset-migration" class="nav-link" data-scroll-target="#asset-migration">Asset Migration</a></li>
+  <li><a href="#styling-adaptation" id="toc-styling-adaptation" class="nav-link" data-scroll-target="#styling-adaptation">Styling Adaptation</a></li>
+  </ul></li>
+  <li><a href="#migration-process" id="toc-migration-process" class="nav-link" data-scroll-target="#migration-process">Migration Process</a>
+  <ul class="collapse">
+  <li><a href="#step-1-project-setup" id="toc-step-1-project-setup" class="nav-link" data-scroll-target="#step-1-project-setup">Step 1: Project Setup</a></li>
+  <li><a href="#step-2-content-migration" id="toc-step-2-content-migration" class="nav-link" data-scroll-target="#step-2-content-migration">Step 2: Content Migration</a></li>
+  <li><a href="#step-3-design-implementation" id="toc-step-3-design-implementation" class="nav-link" data-scroll-target="#step-3-design-implementation">Step 3: Design Implementation</a></li>
+  <li><a href="#step-4-deployment-setup" id="toc-step-4-deployment-setup" class="nav-link" data-scroll-target="#step-4-deployment-setup">Step 4: Deployment Setup</a></li>
+  </ul></li>
+  <li><a href="#results-and-benefits" id="toc-results-and-benefits" class="nav-link" data-scroll-target="#results-and-benefits">Results and Benefits</a>
+  <ul class="collapse">
+  <li><a href="#improved-research-workflow" id="toc-improved-research-workflow" class="nav-link" data-scroll-target="#improved-research-workflow">Improved Research Workflow</a></li>
+  <li><a href="#better-content-management" id="toc-better-content-management" class="nav-link" data-scroll-target="#better-content-management">Better Content Management</a></li>
+  <li><a href="#enhanced-functionality" id="toc-enhanced-functionality" class="nav-link" data-scroll-target="#enhanced-functionality">Enhanced Functionality</a></li>
+  </ul></li>
+  <li><a href="#lessons-learned" id="toc-lessons-learned" class="nav-link" data-scroll-target="#lessons-learned">Lessons Learned</a>
+  <ul class="collapse">
+  <li><a href="#planning-is-essential" id="toc-planning-is-essential" class="nav-link" data-scroll-target="#planning-is-essential">Planning is Essential</a></li>
+  <li><a href="#gradual-migration-works-best" id="toc-gradual-migration-works-best" class="nav-link" data-scroll-target="#gradual-migration-works-best">Gradual Migration Works Best</a></li>
+  <li><a href="#community-resources-are-valuable" id="toc-community-resources-are-valuable" class="nav-link" data-scroll-target="#community-resources-are-valuable">Community Resources Are Valuable</a></li>
+  </ul></li>
+  <li><a href="#future-enhancements" id="toc-future-enhancements" class="nav-link" data-scroll-target="#future-enhancements">Future Enhancements</a></li>
+  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">Recommendations</a>
+  <ul class="collapse">
+  <li><a href="#when-to-migrate" id="toc-when-to-migrate" class="nav-link" data-scroll-target="#when-to-migrate">When to Migrate</a></li>
+  <li><a href="#migration-tips" id="toc-migration-tips" class="nav-link" data-scroll-target="#migration-tips">Migration Tips</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">From Hugo to Quarto: A Migration Journey</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Web Development</div>
+    <div class="quarto-category">Quarto</div>
+    <div class="quarto-category">Hugo</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    My experience migrating from Hugo/Toha theme to Quarto for a more integrated research workflow
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gustavo Togeiro de Alckmin </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 5, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="why-i-migrated-my-website-from-hugo-to-quarto" class="level1">
+<h1>Why I Migrated My Website from Hugo to Quarto</h1>
+<p>After maintaining my academic website using Hugo with the Toha theme, I recently made the decision to migrate to Quarto. This post documents my journey, the reasons behind the switch, and lessons learned during the migration process.</p>
+<section id="my-previous-setup-hugo-toha" class="level2">
+<h2 class="anchored" data-anchor-id="my-previous-setup-hugo-toha">My Previous Setup: Hugo + Toha</h2>
+<p>My original website was built using:</p>
+<ul>
+<li><strong>Hugo</strong>: Fast static site generator</li>
+<li><strong>Toha Theme</strong>: Beautiful academic portfolio theme</li>
+<li><strong>YAML data files</strong>: Structured content management</li>
+<li><strong>GitHub Pages</strong>: Free hosting and deployment</li>
+</ul>
+<p>The Hugo setup served me well for several years, providing a professional-looking academic portfolio with sections for about, experience, projects, and blog posts.</p>
+</section>
+<section id="why-migrate-to-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="why-migrate-to-quarto">Why Migrate to Quarto?</h2>
+<p>Several factors influenced my decision to migrate:</p>
+<section id="research-integration" class="level3">
+<h3 class="anchored" data-anchor-id="research-integration">1. Research Integration</h3>
+<p>As a researcher working primarily with R, Quarto offers seamless integration:</p>
+<div class="cell" data-hash="index_cache/html/example-integration_48e6bdaa57d1af00b69777489a5a4a7c">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: Embedding live data analysis in website content</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">technology =</span> <span class="fu">c</span>(<span class="st">"Hugo"</span>, <span class="st">"Quarto"</span>, <span class="st">"Traditional CMS"</span>),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">research_integration =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">1</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">ease_of_use =</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">9</span>, <span class="dv">8</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> research_integration, <span class="at">y =</span> ease_of_use, </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                 <span class="at">color =</span> technology, <span class="at">size =</span> <span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Technology Comparison for Academic Websites"</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Research Integration (1-10)"</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Ease of Use (1-10)"</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">size =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/example-integration-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="unified-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="unified-workflow">2. Unified Workflow</h3>
+<p>With Quarto, I can now:</p>
+<ul>
+<li>Write blog posts with embedded R code and live results</li>
+<li>Create presentations from the same content</li>
+<li>Generate PDFs for academic papers</li>
+<li>Maintain consistent styling across all outputs</li>
+</ul>
+</section>
+<section id="modern-development-experience" class="level3">
+<h3 class="anchored" data-anchor-id="modern-development-experience">3. Modern Development Experience</h3>
+<p>Quarto provides:</p>
+<ul>
+<li>Better developer tools and VS Code integration</li>
+<li>Live preview during development</li>
+<li>More flexible theming options</li>
+<li>Built-in Bootstrap integration</li>
+</ul>
+</section>
+</section>
+<section id="migration-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="migration-challenges">Migration Challenges</h2>
+<section id="content-conversion" class="level3">
+<h3 class="anchored" data-anchor-id="content-conversion">Content Conversion</h3>
+<p>The biggest challenge was converting Hugo’s YAML-based content structure to Quarto’s markdown files:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hugo structure (data/en/sections/about.yaml)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">section</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> About</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">designation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Postdoc Researcher"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">company</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"University of Missouri"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">summary</span><span class="kw">:</span><span class="at"> </span><span class="st">'Research summary...'</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">socialLinks</span><span class="kw">:</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Github</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> </span><span class="st">"fab fa-github"</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/username"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To Quarto’s integrated markdown:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "About"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Background</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Research summary integrated directly in markdown...</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">{{&lt; fa brands github &gt;}} GitHub</span><span class="co">](https://github.com/username)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="asset-migration" class="level3">
+<h3 class="anchored" data-anchor-id="asset-migration">Asset Migration</h3>
+<p>Moving images and static files required:</p>
+<ol type="1">
+<li><strong>Reorganizing directory structure</strong></li>
+<li><strong>Updating image references</strong></li>
+<li><strong>Converting icon systems</strong> (Font Awesome integration)</li>
+<li><strong>Adapting responsive layouts</strong></li>
+</ol>
+</section>
+<section id="styling-adaptation" class="level3">
+<h3 class="anchored" data-anchor-id="styling-adaptation">Styling Adaptation</h3>
+<p>Transitioning from Toha’s custom CSS to Bootstrap-based styling:</p>
+<ul>
+<li>Maintained visual consistency</li>
+<li>Adapted color schemes and typography</li>
+<li>Ensured mobile responsiveness</li>
+<li>Added custom SCSS for specific needs</li>
+</ul>
+</section>
+</section>
+<section id="migration-process" class="level2">
+<h2 class="anchored" data-anchor-id="migration-process">Migration Process</h2>
+<section id="step-1-project-setup" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-project-setup">Step 1: Project Setup</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create new Quarto project</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> alckmin-quarto-site</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> alckmin-quarto-site</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project . <span class="at">--type</span> website</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-2-content-migration" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-content-migration">Step 2: Content Migration</h3>
+<p>I created a systematic approach:</p>
+<ol type="1">
+<li><strong>Extracted content</strong> from YAML files</li>
+<li><strong>Converted to Quarto markdown</strong> format</li>
+<li><strong>Reorganized directory structure</strong></li>
+<li><strong>Updated internal links and references</strong></li>
+</ol>
+</section>
+<section id="step-3-design-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-design-implementation">Step 3: Design Implementation</h3>
+<ul>
+<li><strong>Bootstrap theme</strong> selection and customization</li>
+<li><strong>SCSS variables</strong> for consistent branding</li>
+<li><strong>Component styling</strong> for cards, timelines, etc.</li>
+<li><strong>Responsive design</strong> optimization</li>
+</ul>
+</section>
+<section id="step-4-deployment-setup" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-deployment-setup">Step 4: Deployment Setup</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GitHub Actions workflow for automatic deployment</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Render and Publish</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">main</span><span class="kw">]</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build-deploy</span><span class="kw">:</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> quarto-dev/quarto-actions/setup@v2</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> quarto-dev/quarto-actions/render@v2</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/upload-pages-artifact@v2</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">path</span><span class="kw">:</span><span class="at"> docs</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/deploy-pages@v2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="results-and-benefits" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-benefits">Results and Benefits</h2>
+<section id="improved-research-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="improved-research-workflow">Improved Research Workflow</h3>
+<p>Now I can:</p>
+<ul>
+<li>Include live R analysis in blog posts</li>
+<li>Embed interactive visualizations</li>
+<li>Maintain reproducible content</li>
+<li>Version control everything in one place</li>
+</ul>
+</section>
+<section id="better-content-management" class="level3">
+<h3 class="anchored" data-anchor-id="better-content-management">Better Content Management</h3>
+<ul>
+<li><strong>Single-source publishing</strong>: Same content for web, PDF, presentations</li>
+<li><strong>Live code execution</strong>: Results update automatically</li>
+<li><strong>Better collaboration</strong>: Markdown-based content is easier to edit</li>
+<li><strong>Version control</strong>: Git-friendly plain text format</li>
+</ul>
+</section>
+<section id="enhanced-functionality" class="level3">
+<h3 class="anchored" data-anchor-id="enhanced-functionality">Enhanced Functionality</h3>
+<p>The new site includes:</p>
+<ul>
+<li><strong>Interactive code blocks</strong> with copy functionality</li>
+<li><strong>Mathematical expressions</strong> with KaTeX</li>
+<li><strong>Responsive design</strong> that works on all devices</li>
+<li><strong>Fast loading</strong> with optimized assets</li>
+</ul>
+</section>
+</section>
+<section id="lessons-learned" class="level2">
+<h2 class="anchored" data-anchor-id="lessons-learned">Lessons Learned</h2>
+<section id="planning-is-essential" class="level3">
+<h3 class="anchored" data-anchor-id="planning-is-essential">Planning is Essential</h3>
+<ul>
+<li><strong>Content audit</strong> before migration saved time</li>
+<li><strong>Asset inventory</strong> helped track all files</li>
+<li><strong>URL mapping</strong> maintained SEO value</li>
+<li><strong>Backup strategy</strong> provided peace of mind</li>
+</ul>
+</section>
+<section id="gradual-migration-works-best" class="level3">
+<h3 class="anchored" data-anchor-id="gradual-migration-works-best">Gradual Migration Works Best</h3>
+<p>Instead of a big-bang approach:</p>
+<ol type="1">
+<li><strong>Set up parallel development</strong></li>
+<li><strong>Migrate content section by section</strong></li>
+<li><strong>Test thoroughly</strong> at each stage</li>
+<li><strong>Maintain old site</strong> until confident</li>
+</ol>
+</section>
+<section id="community-resources-are-valuable" class="level3">
+<h3 class="anchored" data-anchor-id="community-resources-are-valuable">Community Resources Are Valuable</h3>
+<ul>
+<li><strong>Quarto documentation</strong> is excellent</li>
+<li><strong>Community examples</strong> provided inspiration</li>
+<li><strong>GitHub discussions</strong> helped solve specific issues</li>
+<li><strong>Bootstrap themes</strong> offered design starting points</li>
+</ul>
+</section>
+</section>
+<section id="future-enhancements" class="level2">
+<h2 class="anchored" data-anchor-id="future-enhancements">Future Enhancements</h2>
+<p>With the Quarto foundation in place, I’m planning:</p>
+<ul>
+<li><strong>Enhanced data visualizations</strong> with Observable JS</li>
+<li><strong>Interactive tutorials</strong> using Quarto’s computational features</li>
+<li><strong>Automated content updates</strong> from research databases</li>
+<li><strong>Multi-format publishing</strong> for presentations and papers</li>
+</ul>
+</section>
+<section id="recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="recommendations">Recommendations</h2>
+<p>For other academics considering a similar migration:</p>
+<section id="when-to-migrate" class="level3">
+<h3 class="anchored" data-anchor-id="when-to-migrate">When to Migrate</h3>
+<p>Consider Quarto if you:</p>
+<ul>
+<li>Work primarily with R, Python, or Julia</li>
+<li>Want integrated computational content</li>
+<li>Value reproducible research workflows</li>
+<li>Need multiple output formats</li>
+</ul>
+</section>
+<section id="migration-tips" class="level3">
+<h3 class="anchored" data-anchor-id="migration-tips">Migration Tips</h3>
+<ol type="1">
+<li><strong>Start small</strong> with a new section or blog</li>
+<li><strong>Use migration tools</strong> where available</li>
+<li><strong>Test thoroughly</strong> across devices and browsers</li>
+<li><strong>Document your process</strong> for future reference</li>
+<li><strong>Backup everything</strong> before starting</li>
+</ol>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Migrating from Hugo to Quarto has significantly improved my research workflow and website management experience. While the migration required substantial effort, the benefits of having an integrated platform for research, analysis, and communication make it worthwhile.</p>
+<p>The ability to embed live code, create reproducible content, and maintain everything in a unified workflow has already enhanced both my research productivity and my ability to share findings with the community.</p>
+<p>For researchers seeking a modern, integrated approach to academic websites, Quarto represents a compelling choice that bridges the gap between research tools and web publishing.</p>
+<hr>
+<p><em>Interested in learning more about my migration process or Quarto for academic websites? Feel free to <a href="mailto:gustavo.togeirodealckmin@missouri.edu">reach out</a> with questions!</em></p>
 
 
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

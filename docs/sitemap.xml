@@ -2,18 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gtalckmin.github.io/alckmin-quarto-site/about.html</loc>
-    <lastmod>2025-06-05T11:41:17.018Z</lastmod>
+    <lastmod>2025-06-05T12:44:53.848Z</lastmod>
   </url>
   <url>
     <loc>https://gtalckmin.github.io/alckmin-quarto-site/projects.html</loc>
-    <lastmod>2025-06-05T11:41:14.507Z</lastmod>
+    <lastmod>2025-06-05T12:34:12.354Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gtalckmin.github.io/alckmin-quarto-site/posts/hello-r-markdown/index.html</loc>
+    <lastmod>2025-06-05T12:24:02.699Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gtalckmin.github.io/alckmin-quarto-site/posts/index.html</loc>
+    <lastmod>2025-06-05T12:45:04.804Z</lastmod>
   </url>
   <url>
     <loc>https://gtalckmin.github.io/alckmin-quarto-site/index.html</loc>
-    <lastmod>2025-06-05T11:41:13.011Z</lastmod>
+    <lastmod>2025-06-05T12:44:21.277Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gtalckmin.github.io/alckmin-quarto-site/SETUP_COMPLETE.html</loc>
+    <lastmod>2025-06-05T12:23:56.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gtalckmin.github.io/alckmin-quarto-site/DEPLOYMENT.html</loc>
+    <lastmod>2025-06-05T12:23:57.558Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gtalckmin.github.io/alckmin-quarto-site/posts/remote-sensing-agriculture/index.html</loc>
+    <lastmod>2025-06-05T12:45:19.300Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gtalckmin.github.io/alckmin-quarto-site/posts/hugo-to-quarto-migration/index.html</loc>
+    <lastmod>2025-06-05T12:24:05.005Z</lastmod>
   </url>
   <url>
     <loc>https://gtalckmin.github.io/alckmin-quarto-site/experience.html</loc>
-    <lastmod>2025-06-05T11:41:15.046Z</lastmod>
+    <lastmod>2025-06-05T12:44:30.945Z</lastmod>
   </url>
 </urlset>

@@ -11,12 +11,66 @@ My career spans academia, entrepreneurship, and industry, with a focus on agricu
 
 ::: {.timeline-item}
 ::: {.timeline-content}
+### Lecturer
+::: {.company}
+**University of Western Australia** | Perth, WA, Australia
+:::
+::: {.duration}
+January 2024 - Present
+:::
+
+Current academic position focusing on agricultural technology and remote sensing education.
+
+**Key Responsibilities:**
+- Course development and delivery in agricultural technology
+- Student supervision and mentoring
+- Research supervision and collaboration
+- Academic program development
+- Industry engagement and partnerships
+
+**Focus Areas:**
+- Remote sensing applications in agriculture
+- Precision agriculture technologies
+- Data science in agricultural systems
+- Sustainable farming practices
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-content}
+### Lecturer
+::: {.company}
+**University of Melbourne** | Melbourne, VIC, Australia
+:::
+::: {.duration}
+May 2022 - February 2023
+:::
+
+Academic position focused on agricultural remote sensing and precision farming technologies.
+
+**Key Responsibilities:**
+- Teaching undergraduate and graduate courses
+- Research project supervision
+- Academic curriculum development
+- Student assessment and evaluation
+- Collaboration with industry partners
+
+**Teaching Areas:**
+- Agricultural remote sensing
+- Data analysis and visualization
+- Precision agriculture systems
+- Research methodology
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-content}
 ### Postdoc Researcher
 ::: {.company}
 **University of Missouri** | Columbia, MO, United States
 :::
 ::: {.duration}
-August 2021 - Present
+August 2021 - May 2022
 :::
 
 Working with the [Missouri Forage and Livestock Program](https://muforagelivestock.org/) to develop innovative solutions for precision pasture management.

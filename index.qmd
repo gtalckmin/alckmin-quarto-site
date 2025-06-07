@@ -129,14 +129,74 @@ ggplot(skills, aes(x = reorder(skill, percentage), y = percentage, fill = color)
 ::: {.container .mt-5}
 ## Current Position
 
-::: {.position-card}
-**Postdoc Researcher** at **University of Missouri**  
-*August 2021 - Present*
+```{r}
+#| echo: false
+#| results: asis
 
-- Development of Remote Sensing Techniques, particularly satellite-based time-series, for biomass estimation
-- Development of canopy-height sensor and web-based applications  
-- Scientific Writing and Publication
+# Read the experience.qmd file and extract current position
+experience_content <- readLines("experience.qmd")
 
-[View Full Experience →](experience.qmd)
-:::
+# Find the first timeline item (current position)
+# Look for the first Lecturer position (most recent)
+lecturer_lines <- grep("### Lecturer", experience_content)
+if (length(lecturer_lines) > 0) {
+  first_lecturer <- lecturer_lines[1]
+  
+  # Extract company information from the lines following the first lecturer
+  company_pattern <- "\\*\\*([^\\*]+)\\*\\*"
+  for (i in (first_lecturer + 1):(first_lecturer + 10)) {
+    if (i <= length(experience_content)) {
+      line <- experience_content[i]
+      if (grepl(company_pattern, line)) {
+        company_match <- regmatches(line, regexpr(company_pattern, line))
+        company <- gsub("\\*\\*", "", company_match)
+        break
+      }
+    }
+  }
+  
+  # Extract duration
+  duration_pattern <- "January 2024 - Present|May 2022 - February 2023"
+  duration_line_idx <- grep(duration_pattern, experience_content)[1]
+  if (!is.na(duration_line_idx)) {
+    duration <- trimws(experience_content[duration_line_idx])
+  } else {
+    duration <- "January 2024 - Present"
+  }
+  
+  # Set current position info
+  if (grepl("January 2024", duration)) {
+    position_title <- "Lecturer"
+    company <- "University of Western Australia"
+    location <- "Perth, WA, Australia"
+  } else {
+    position_title <- "Lecturer"
+    company <- "University of Melbourne"
+    location <- "Melbourne, VIC, Australia"
+  }
+  
+  # Find responsibilities for current position
+  resp_start <- grep("\\*\\*Key Responsibilities:\\*\\*", experience_content)[1]
+  if (!is.na(resp_start)) {
+    resp_lines <- experience_content[(resp_start + 1):(resp_start + 8)]
+    responsibilities <- resp_lines[grepl("^- ", resp_lines)]
+    resp_text <- paste(responsibilities[1:min(3, length(responsibilities))], collapse = '\n')
+  } else {
+    resp_text <- "- Course development and delivery in agricultural technology\n- Student supervision and mentoring\n- Research supervision and collaboration"
+  }
+  
+  cat(paste0(
+    '::: {.position-card}\n',
+    '**', position_title, '** at **', company, '**  \n',
+    '*', location, '*  \n',
+    '*', duration, '*\n\n',
+    resp_text, '\n\n',
+    '[View Full Experience →](experience.qmd)\n',
+    ':::\n'
+  ))
+} else {
+  # Fallback if parsing fails
+  cat('::: {.position-card}\n**Lecturer** at **University of Western Australia**  \n*Perth, WA, Australia*  \n*January 2024 - Present*\n\n- Course development and delivery in agricultural technology\n- Student supervision and mentoring\n- Research supervision and collaboration\n\n[View Full Experience →](experience.qmd)\n:::\n')
+}
+```
 :::

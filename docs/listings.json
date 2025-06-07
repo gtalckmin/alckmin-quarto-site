@@ -1,0 +1,10 @@
+[
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/hugo-to-quarto-migration/index.html",
+      "/posts/remote-sensing-agriculture/index.html",
+      "/posts/hello-r-markdown/index.html"
+    ]
+  }
+]

@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Gustavo Togeiro de Alckmin">
+<meta name="dcterms.date" content="2024-03-15">
+<meta name="description" content="How satellite-based remote sensing is revolutionizing modern agriculture">
 
-<title>Gustavo Togeiro de Alckmin – index</title>
+<title>Gustavo Togeiro de Alckmin - Remote Sensing for Precision Agriculture</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -138,16 +175,250 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-future-of-farming-is-in-the-sky" id="toc-the-future-of-farming-is-in-the-sky" class="nav-link active" data-scroll-target="#the-future-of-farming-is-in-the-sky">The Future of Farming is in the Sky</a>
+  <ul class="collapse">
+  <li><a href="#what-is-remote-sensing-in-agriculture" id="toc-what-is-remote-sensing-in-agriculture" class="nav-link" data-scroll-target="#what-is-remote-sensing-in-agriculture">What is Remote Sensing in Agriculture?</a></li>
+  <li><a href="#key-technologies-i-work-with" id="toc-key-technologies-i-work-with" class="nav-link" data-scroll-target="#key-technologies-i-work-with">Key Technologies I Work With</a>
+  <ul class="collapse">
+  <li><a href="#google-earth-engine-gee" id="toc-google-earth-engine-gee" class="nav-link" data-scroll-target="#google-earth-engine-gee">Google Earth Engine (GEE)</a></li>
+  <li><a href="#satellite-data-sources" id="toc-satellite-data-sources" class="nav-link" data-scroll-target="#satellite-data-sources">Satellite Data Sources</a></li>
+  </ul></li>
+  <li><a href="#real-world-applications" id="toc-real-world-applications" class="nav-link" data-scroll-target="#real-world-applications">Real-World Applications</a>
+  <ul class="collapse">
+  <li><a href="#pasture-management" id="toc-pasture-management" class="nav-link" data-scroll-target="#pasture-management">Pasture Management</a></li>
+  <li><a href="#crop-monitoring" id="toc-crop-monitoring" class="nav-link" data-scroll-target="#crop-monitoring">Crop Monitoring</a></li>
+  </ul></li>
+  <li><a href="#challenges-and-solutions" id="toc-challenges-and-solutions" class="nav-link" data-scroll-target="#challenges-and-solutions">Challenges and Solutions</a>
+  <ul class="collapse">
+  <li><a href="#cloud-cover" id="toc-cloud-cover" class="nav-link" data-scroll-target="#cloud-cover">Cloud Cover</a></li>
+  <li><a href="#ground-truth-data" id="toc-ground-truth-data" class="nav-link" data-scroll-target="#ground-truth-data">Ground Truth Data</a></li>
+  </ul></li>
+  <li><a href="#machine-learning-integration" id="toc-machine-learning-integration" class="nav-link" data-scroll-target="#machine-learning-integration">Machine Learning Integration</a>
+  <ul class="collapse">
+  <li><a href="#regression-models" id="toc-regression-models" class="nav-link" data-scroll-target="#regression-models">Regression Models</a></li>
+  <li><a href="#classification" id="toc-classification" class="nav-link" data-scroll-target="#classification">Classification</a></li>
+  <li><a href="#deep-learning" id="toc-deep-learning" class="nav-link" data-scroll-target="#deep-learning">Deep Learning</a></li>
+  </ul></li>
+  <li><a href="#future-directions" id="toc-future-directions" class="nav-link" data-scroll-target="#future-directions">Future Directions</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Remote Sensing for Precision Agriculture</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Remote Sensing</div>
+    <div class="quarto-category">Agriculture</div>
+    <div class="quarto-category">Research</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    How satellite-based remote sensing is revolutionizing modern agriculture
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gustavo Togeiro de Alckmin </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 15, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="the-future-of-farming-is-in-the-sky" class="level1">
+<h1>The Future of Farming is in the Sky</h1>
+<p>Remote sensing technology has transformed how we monitor and manage agricultural systems. As a researcher working at the intersection of technology and agriculture, I’ve witnessed firsthand how satellite imagery and advanced analytics are revolutionizing farming practices.</p>
+<section id="what-is-remote-sensing-in-agriculture" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-remote-sensing-in-agriculture">What is Remote Sensing in Agriculture?</h2>
+<p>Remote sensing involves collecting information about agricultural areas without being in direct contact with them. This is typically done using satellites, drones, or aircraft equipped with various sensors that capture different wavelengths of light reflected from crops and soil.</p>
+<p>In my work at the University of Missouri, I focus on:</p>
+<ul>
+<li><strong>Biomass estimation</strong> using satellite time-series data</li>
+<li><strong>Crop health monitoring</strong> through vegetation indices</li>
+<li><strong>Yield prediction</strong> using machine learning algorithms</li>
+<li><strong>Precision agriculture</strong> applications for site-specific management</li>
+</ul>
+</section>
+<section id="key-technologies-i-work-with" class="level2">
+<h2 class="anchored" data-anchor-id="key-technologies-i-work-with">Key Technologies I Work With</h2>
+<section id="google-earth-engine-gee" class="level3">
+<h3 class="anchored" data-anchor-id="google-earth-engine-gee">Google Earth Engine (GEE)</h3>
+<p>Google Earth Engine has been a game-changer for agricultural remote sensing. It provides:</p>
+<div class="cell" data-hash="index_cache/html/gee-example_4b401a3814d59a7e5ba01a4c10a374b9">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example of GEE workflow in R</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rgee)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize GEE</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ee_Initialize</span>()</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load Sentinel-2 imagery</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>s2 <span class="ot">&lt;-</span> ee<span class="sc">$</span><span class="fu">ImageCollection</span>(<span class="st">"COPERNICUS/S2_SR"</span>)<span class="sc">$</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filterDate</span>(<span class="st">"2023-06-01"</span>, <span class="st">"2023-08-31"</span>)<span class="sc">$</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filterBounds</span>(my_study_area)<span class="sc">$</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(ee<span class="sc">$</span>Filter<span class="sc">$</span><span class="fu">lt</span>(<span class="st">"CLOUDY_PIXEL_PERCENTAGE"</span>, <span class="dv">20</span>))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate NDVI</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ndvi <span class="ot">&lt;-</span> s2<span class="sc">$</span><span class="fu">map</span>(<span class="cf">function</span>(image) {</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(image<span class="sc">$</span><span class="fu">normalizedDifference</span>(<span class="fu">c</span>(<span class="st">"B8"</span>, <span class="st">"B4"</span>))<span class="sc">$</span><span class="fu">rename</span>(<span class="st">"NDVI"</span>))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Get time series for analysis</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ndvi_ts <span class="ot">&lt;-</span> ndvi<span class="sc">$</span><span class="fu">getRegion</span>(my_study_area, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="satellite-data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="satellite-data-sources">Satellite Data Sources</h3>
+<p>The satellites I commonly work with include:</p>
+<ol type="1">
+<li><strong>Sentinel-2</strong>: High-resolution optical imagery (10-60m)</li>
+<li><strong>Landsat</strong>: Long-term historical data (30m)</li>
+<li><strong>MODIS</strong>: Daily global coverage (250-1000m)</li>
+<li><strong>Planet</strong>: Very high-resolution commercial imagery (3-5m)</li>
+</ol>
+</section>
+</section>
+<section id="real-world-applications" class="level2">
+<h2 class="anchored" data-anchor-id="real-world-applications">Real-World Applications</h2>
+<section id="pasture-management" class="level3">
+<h3 class="anchored" data-anchor-id="pasture-management">Pasture Management</h3>
+<p>In my current research, I’m developing systems for:</p>
+<ul>
+<li><strong>Biomass quantification</strong>: Estimating grass quantity for grazing management</li>
+<li><strong>Growth rate monitoring</strong>: Tracking pasture recovery after grazing</li>
+<li><strong>Seasonal patterns</strong>: Understanding long-term vegetation dynamics</li>
+</ul>
+</section>
+<section id="crop-monitoring" class="level3">
+<h3 class="anchored" data-anchor-id="crop-monitoring">Crop Monitoring</h3>
+<p>Remote sensing enables farmers to:</p>
+<ul>
+<li>Identify stressed areas before visual symptoms appear</li>
+<li>Optimize irrigation and fertilizer application</li>
+<li>Predict yields for planning and marketing</li>
+<li>Monitor crop development throughout the season</li>
+</ul>
+</section>
+</section>
+<section id="challenges-and-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="challenges-and-solutions">Challenges and Solutions</h2>
+<section id="cloud-cover" class="level3">
+<h3 class="anchored" data-anchor-id="cloud-cover">Cloud Cover</h3>
+<p>One major challenge in optical remote sensing is cloud cover. I address this by:</p>
+<ul>
+<li>Using time-series approaches with multiple observations</li>
+<li>Combining different satellite systems</li>
+<li>Implementing cloud-masking algorithms</li>
+<li>Exploring radar data (Sentinel-1) for cloudy conditions</li>
+</ul>
+</section>
+<section id="ground-truth-data" class="level3">
+<h3 class="anchored" data-anchor-id="ground-truth-data">Ground Truth Data</h3>
+<p>Accurate remote sensing requires field validation:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example of correlating satellite data with field measurements</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(validation_data, <span class="fu">aes</span>(<span class="at">x =</span> satellite_ndvi, <span class="at">y =</span> field_biomass)) <span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Satellite NDVI vs Field Biomass"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Satellite NDVI"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Field Biomass (kg/ha)"</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="machine-learning-integration" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-integration">Machine Learning Integration</h2>
+<p>Modern remote sensing increasingly relies on machine learning:</p>
+<section id="regression-models" class="level3">
+<h3 class="anchored" data-anchor-id="regression-models">Regression Models</h3>
+<ul>
+<li>Predicting continuous variables (biomass, yield)</li>
+<li>Using multiple spectral bands as predictors</li>
+<li>Time-series analysis for temporal patterns</li>
+</ul>
+</section>
+<section id="classification" class="level3">
+<h3 class="anchored" data-anchor-id="classification">Classification</h3>
+<ul>
+<li>Crop type mapping</li>
+<li>Disease detection</li>
+<li>Land use classification</li>
+</ul>
+</section>
+<section id="deep-learning" class="level3">
+<h3 class="anchored" data-anchor-id="deep-learning">Deep Learning</h3>
+<ul>
+<li>Convolutional neural networks for image analysis</li>
+<li>Recurrent neural networks for time-series</li>
+<li>Transfer learning from large datasets</li>
+</ul>
+</section>
+</section>
+<section id="future-directions" class="level2">
+<h2 class="anchored" data-anchor-id="future-directions">Future Directions</h2>
+<p>The field is rapidly evolving with:</p>
+<ol type="1">
+<li><strong>Higher spatial and temporal resolution</strong> satellites</li>
+<li><strong>Hyperspectral imaging</strong> for detailed crop analysis</li>
+<li><strong>AI and machine learning</strong> integration</li>
+<li><strong>Real-time data processing</strong> capabilities</li>
+<li><strong>Integration with IoT sensors</strong> for comprehensive monitoring</li>
+</ol>
+</section>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<p>For researchers interested in agricultural remote sensing:</p>
+<ol type="1">
+<li><strong>Learn R or Python</strong> for data analysis</li>
+<li><strong>Explore Google Earth Engine</strong> for satellite data access</li>
+<li><strong>Understand basic vegetation indices</strong> (NDVI, EVI, etc.)</li>
+<li><strong>Practice with open datasets</strong> (Landsat, Sentinel)</li>
+<li><strong>Connect with field measurements</strong> for validation</li>
+</ol>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Remote sensing is no longer just a research tool—it’s becoming essential for modern agriculture. As we face challenges of feeding a growing population while managing environmental resources, these technologies offer unprecedented insights into agricultural systems.</p>
+<p>The integration of satellite data, machine learning, and field expertise is creating new possibilities for precision agriculture that can increase productivity while reducing environmental impact.</p>
+<hr>
+<p><em>Want to learn more about my remote sensing research? <a href="mailto:gustavo.togeirodealckmin@missouri.edu">Contact me</a> or check out my <a href="../../projects.html">current projects</a>.</em></p>
 
 
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

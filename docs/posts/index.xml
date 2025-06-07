@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Gustavo Togeiro de Alckmin</title>
+<link>https://gtalckmin.github.io/alckmin-quarto-site/posts/index.html</link>
+<atom:link href="https://gtalckmin.github.io/alckmin-quarto-site/posts/index.xml" rel="self" type="application/rss+xml"/>
+<description>Ag-Tech Professional | Remote Sensing Researcher | Data Scientist</description>
+<generator>quarto-1.3.450</generator>
+<lastBuildDate>Wed, 04 Jun 2025 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>From Hugo to Quarto: A Migration Journey</title>
+  <dc:creator>Gustavo Togeiro de Alckmin</dc:creator>
+  <link>https://gtalckmin.github.io/alckmin-quarto-site/posts/hugo-to-quarto-migration/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="why-i-migrated-my-website-from-hugo-to-quarto" class="level1">
+<h1>Why I Migrated My Website from Hugo to Quarto</h1>
+<p>After maintaining my academic website using Hugo with the Toha theme, I recently made the decision to migrate to Quarto. This post documents my journey, the reasons behind the switch, and lessons learned during the migration process.</p>
+<section id="my-previous-setup-hugo-toha" class="level2">
+<h2 class="anchored" data-anchor-id="my-previous-setup-hugo-toha">My Previous Setup: Hugo + Toha</h2>
+<p>My original website was built using:</p>
+<ul>
+<li><strong>Hugo</strong>: Fast static site generator</li>
+<li><strong>Toha Theme</strong>: Beautiful academic portfolio theme</li>
+<li><strong>YAML data files</strong>: Structured content management</li>
+<li><strong>GitHub Pages</strong>: Free hosting and deployment</li>
+</ul>
+<p>The Hugo setup served me well for several years, providing a professional-looking academic portfolio with sections for about, experience, projects, and blog posts.</p>
+</section>
+<section id="why-migrate-to-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="why-migrate-to-quarto">Why Migrate to Quarto?</h2>
+<p>Several factors influenced my decision to migrate:</p>
+<section id="research-integration" class="level3">
+<h3 class="anchored" data-anchor-id="research-integration">1. Research Integration</h3>
+<p>As a researcher working primarily with R, Quarto offers seamless integration:</p>
+<div class="cell" data-hash="index_cache/html/example-integration_48e6bdaa57d1af00b69777489a5a4a7c">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Example: Embedding live data analysis in website content</span></span>
+<span id="cb1-5">data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(</span>
+<span id="cb1-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">technology =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Hugo"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Quarto"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Traditional CMS"</span>),</span>
+<span id="cb1-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">research_integration =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>),</span>
+<span id="cb1-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ease_of_use =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>)</span>
+<span id="cb1-9">)</span>
+<span id="cb1-10"></span>
+<span id="cb1-11"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(data, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> research_integration, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> ease_of_use, </span>
+<span id="cb1-12">                 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> technology, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb1-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Technology Comparison for Academic Websites"</span>,</span>
+<span id="cb1-16">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Research Integration (1-10)"</span>,</span>
+<span id="cb1-17">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Ease of Use (1-10)"</span></span>
+<span id="cb1-18">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-19">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-20">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guides</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"none"</span>)</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="https://gtalckmin.github.io/alckmin-quarto-site/posts/hugo-to-quarto-migration/index_files/figure-html/example-integration-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="unified-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="unified-workflow">2. Unified Workflow</h3>
+<p>With Quarto, I can now:</p>
+<ul>
+<li>Write blog posts with embedded R code and live results</li>
+<li>Create presentations from the same content</li>
+<li>Generate PDFs for academic papers</li>
+<li>Maintain consistent styling across all outputs</li>
+</ul>
+</section>
+<section id="modern-development-experience" class="level3">
+<h3 class="anchored" data-anchor-id="modern-development-experience">3. Modern Development Experience</h3>
+<p>Quarto provides:</p>
+<ul>
+<li>Better developer tools and VS Code integration</li>
+<li>Live preview during development</li>
+<li>More flexible theming options</li>
+<li>Built-in Bootstrap integration</li>
+</ul>
+</section>
+</section>
+<section id="migration-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="migration-challenges">Migration Challenges</h2>
+<section id="content-conversion" class="level3">
+<h3 class="anchored" data-anchor-id="content-conversion">Content Conversion</h3>
+<p>The biggest challenge was converting Hugo’s YAML-based content structure to Quarto’s markdown files:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Hugo structure (data/en/sections/about.yaml)</span></span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">section</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb2-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> About</span></span>
+<span id="cb2-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">designation</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Postdoc Researcher"</span></span>
+<span id="cb2-5"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">company</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb2-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"University of Missouri"</span></span>
+<span id="cb2-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Research summary...'</span></span>
+<span id="cb2-8"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">socialLinks</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb2-9"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Github</span></span>
+<span id="cb2-10"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">icon</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"fab fa-github"</span></span>
+<span id="cb2-11"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">url</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://github.com/username"</span></span></code></pre></div>
+<p>To Quarto’s integrated markdown:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">---</span></span>
+<span id="cb3-2"><span class="an" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">title:</span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> "About"</span></span>
+<span id="cb3-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">---</span></span>
+<span id="cb3-4"></span>
+<span id="cb3-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">## Background</span></span>
+<span id="cb3-6">Research summary integrated directly in markdown...</span>
+<span id="cb3-7"></span>
+<span id="cb3-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">{{&lt; fa brands github &gt;}} GitHub</span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">](https://github.com/username)</span></span></code></pre></div>
+</section>
+<section id="asset-migration" class="level3">
+<h3 class="anchored" data-anchor-id="asset-migration">Asset Migration</h3>
+<p>Moving images and static files required:</p>
+<ol type="1">
+<li><strong>Reorganizing directory structure</strong></li>
+<li><strong>Updating image references</strong></li>
+<li><strong>Converting icon systems</strong> (Font Awesome integration)</li>
+<li><strong>Adapting responsive layouts</strong></li>
+</ol>
+</section>
+<section id="styling-adaptation" class="level3">
+<h3 class="anchored" data-anchor-id="styling-adaptation">Styling Adaptation</h3>
+<p>Transitioning from Toha’s custom CSS to Bootstrap-based styling:</p>
+<ul>
+<li>Maintained visual consistency</li>
+<li>Adapted color schemes and typography</li>
+<li>Ensured mobile responsiveness</li>
+<li>Added custom SCSS for specific needs</li>
+</ul>
+</section>
+</section>
+<section id="migration-process" class="level2">
+<h2 class="anchored" data-anchor-id="migration-process">Migration Process</h2>
+<section id="step-1-project-setup" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-project-setup">Step 1: Project Setup</h3>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Create new Quarto project</span></span>
+<span id="cb4-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mkdir</span> alckmin-quarto-site</span>
+<span id="cb4-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">cd</span> alckmin-quarto-site</span>
+<span id="cb4-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">quarto</span> create-project . <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--type</span> website</span></code></pre></div>
+</section>
+<section id="step-2-content-migration" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-content-migration">Step 2: Content Migration</h3>
+<p>I created a systematic approach:</p>
+<ol type="1">
+<li><strong>Extracted content</strong> from YAML files</li>
+<li><strong>Converted to Quarto markdown</strong> format</li>
+<li><strong>Reorganized directory structure</strong></li>
+<li><strong>Updated internal links and references</strong></li>
+</ol>
+</section>
+<section id="step-3-design-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-design-implementation">Step 3: Design Implementation</h3>
+<ul>
+<li><strong>Bootstrap theme</strong> selection and customization</li>
+<li><strong>SCSS variables</strong> for consistent branding</li>
+<li><strong>Component styling</strong> for cards, timelines, etc.</li>
+<li><strong>Responsive design</strong> optimization</li>
+</ul>
+</section>
+<section id="step-4-deployment-setup" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-deployment-setup">Step 4: Deployment Setup</h3>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># GitHub Actions workflow for automatic deployment</span></span>
+<span id="cb5-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Render and Publish</span></span>
+<span id="cb5-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">on</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb5-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">push</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb5-5"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">branches</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">main</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb5-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">jobs</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb5-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">build-deploy</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb5-8"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">runs-on</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ubuntu-latest</span></span>
+<span id="cb5-9"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">steps</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb5-10"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> actions/checkout@v4</span></span>
+<span id="cb5-11"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> quarto-dev/quarto-actions/setup@v2</span></span>
+<span id="cb5-12"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> quarto-dev/quarto-actions/render@v2</span></span>
+<span id="cb5-13"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> actions/upload-pages-artifact@v2</span></span>
+<span id="cb5-14"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb5-15"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">path</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> docs</span></span>
+<span id="cb5-16"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> actions/deploy-pages@v2</span></span></code></pre></div>
+</section>
+</section>
+<section id="results-and-benefits" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-benefits">Results and Benefits</h2>
+<section id="improved-research-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="improved-research-workflow">Improved Research Workflow</h3>
+<p>Now I can:</p>
+<ul>
+<li>Include live R analysis in blog posts</li>
+<li>Embed interactive visualizations</li>
+<li>Maintain reproducible content</li>
+<li>Version control everything in one place</li>
+</ul>
+</section>
+<section id="better-content-management" class="level3">
+<h3 class="anchored" data-anchor-id="better-content-management">Better Content Management</h3>
+<ul>
+<li><strong>Single-source publishing</strong>: Same content for web, PDF, presentations</li>
+<li><strong>Live code execution</strong>: Results update automatically</li>
+<li><strong>Better collaboration</strong>: Markdown-based content is easier to edit</li>
+<li><strong>Version control</strong>: Git-friendly plain text format</li>
+</ul>
+</section>
+<section id="enhanced-functionality" class="level3">
+<h3 class="anchored" data-anchor-id="enhanced-functionality">Enhanced Functionality</h3>
+<p>The new site includes:</p>
+<ul>
+<li><strong>Interactive code blocks</strong> with copy functionality</li>
+<li><strong>Mathematical expressions</strong> with KaTeX</li>
+<li><strong>Responsive design</strong> that works on all devices</li>
+<li><strong>Fast loading</strong> with optimized assets</li>
+</ul>
+</section>
+</section>
+<section id="lessons-learned" class="level2">
+<h2 class="anchored" data-anchor-id="lessons-learned">Lessons Learned</h2>
+<section id="planning-is-essential" class="level3">
+<h3 class="anchored" data-anchor-id="planning-is-essential">Planning is Essential</h3>
+<ul>
+<li><strong>Content audit</strong> before migration saved time</li>
+<li><strong>Asset inventory</strong> helped track all files</li>
+<li><strong>URL mapping</strong> maintained SEO value</li>
+<li><strong>Backup strategy</strong> provided peace of mind</li>
+</ul>
+</section>
+<section id="gradual-migration-works-best" class="level3">
+<h3 class="anchored" data-anchor-id="gradual-migration-works-best">Gradual Migration Works Best</h3>
+<p>Instead of a big-bang approach:</p>
+<ol type="1">
+<li><strong>Set up parallel development</strong></li>
+<li><strong>Migrate content section by section</strong></li>
+<li><strong>Test thoroughly</strong> at each stage</li>
+<li><strong>Maintain old site</strong> until confident</li>
+</ol>
+</section>
+<section id="community-resources-are-valuable" class="level3">
+<h3 class="anchored" data-anchor-id="community-resources-are-valuable">Community Resources Are Valuable</h3>
+<ul>
+<li><strong>Quarto documentation</strong> is excellent</li>
+<li><strong>Community examples</strong> provided inspiration</li>
+<li><strong>GitHub discussions</strong> helped solve specific issues</li>
+<li><strong>Bootstrap themes</strong> offered design starting points</li>
+</ul>
+</section>
+</section>
+<section id="future-enhancements" class="level2">
+<h2 class="anchored" data-anchor-id="future-enhancements">Future Enhancements</h2>
+<p>With the Quarto foundation in place, I’m planning:</p>
+<ul>
+<li><strong>Enhanced data visualizations</strong> with Observable JS</li>
+<li><strong>Interactive tutorials</strong> using Quarto’s computational features</li>
+<li><strong>Automated content updates</strong> from research databases</li>
+<li><strong>Multi-format publishing</strong> for presentations and papers</li>
+</ul>
+</section>
+<section id="recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="recommendations">Recommendations</h2>
+<p>For other academics considering a similar migration:</p>
+<section id="when-to-migrate" class="level3">
+<h3 class="anchored" data-anchor-id="when-to-migrate">When to Migrate</h3>
+<p>Consider Quarto if you:</p>
+<ul>
+<li>Work primarily with R, Python, or Julia</li>
+<li>Want integrated computational content</li>
+<li>Value reproducible research workflows</li>
+<li>Need multiple output formats</li>
+</ul>
+</section>
+<section id="migration-tips" class="level3">
+<h3 class="anchored" data-anchor-id="migration-tips">Migration Tips</h3>
+<ol type="1">
+<li><strong>Start small</strong> with a new section or blog</li>
+<li><strong>Use migration tools</strong> where available</li>
+<li><strong>Test thoroughly</strong> across devices and browsers</li>
+<li><strong>Document your process</strong> for future reference</li>
+<li><strong>Backup everything</strong> before starting</li>
+</ol>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Migrating from Hugo to Quarto has significantly improved my research workflow and website management experience. While the migration required substantial effort, the benefits of having an integrated platform for research, analysis, and communication make it worthwhile.</p>
+<p>The ability to embed live code, create reproducible content, and maintain everything in a unified workflow has already enhanced both my research productivity and my ability to share findings with the community.</p>
+<p>For researchers seeking a modern, integrated approach to academic websites, Quarto represents a compelling choice that bridges the gap between research tools and web publishing.</p>
+<hr>
+<p><em>Interested in learning more about my migration process or Quarto for academic websites? Feel free to <a href="mailto:gustavo.togeirodealckmin@missouri.edu">reach out</a> with questions!</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>Web Development</category>
+  <category>Quarto</category>
+  <category>Hugo</category>
+  <guid>https://gtalckmin.github.io/alckmin-quarto-site/posts/hugo-to-quarto-migration/index.html</guid>
+  <pubDate>Wed, 04 Jun 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Remote Sensing for Precision Agriculture</title>
+  <dc:creator>Gustavo Togeiro de Alckmin</dc:creator>
+  <link>https://gtalckmin.github.io/alckmin-quarto-site/posts/remote-sensing-agriculture/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="the-future-of-farming-is-in-the-sky" class="level1">
+<h1>The Future of Farming is in the Sky</h1>
+<p>Remote sensing technology has transformed how we monitor and manage agricultural systems. As a researcher working at the intersection of technology and agriculture, I’ve witnessed firsthand how satellite imagery and advanced analytics are revolutionizing farming practices.</p>
+<section id="what-is-remote-sensing-in-agriculture" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-remote-sensing-in-agriculture">What is Remote Sensing in Agriculture?</h2>
+<p>Remote sensing involves collecting information about agricultural areas without being in direct contact with them. This is typically done using satellites, drones, or aircraft equipped with various sensors that capture different wavelengths of light reflected from crops and soil.</p>
+<p>In my work at the University of Missouri, I focus on:</p>
+<ul>
+<li><strong>Biomass estimation</strong> using satellite time-series data</li>
+<li><strong>Crop health monitoring</strong> through vegetation indices</li>
+<li><strong>Yield prediction</strong> using machine learning algorithms</li>
+<li><strong>Precision agriculture</strong> applications for site-specific management</li>
+</ul>
+</section>
+<section id="key-technologies-i-work-with" class="level2">
+<h2 class="anchored" data-anchor-id="key-technologies-i-work-with">Key Technologies I Work With</h2>
+<section id="google-earth-engine-gee" class="level3">
+<h3 class="anchored" data-anchor-id="google-earth-engine-gee">Google Earth Engine (GEE)</h3>
+<p>Google Earth Engine has been a game-changer for agricultural remote sensing. It provides:</p>
+<div class="cell" data-hash="index_cache/html/gee-example_4b401a3814d59a7e5ba01a4c10a374b9">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Example of GEE workflow in R</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(rgee)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Initialize GEE</span></span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ee_Initialize</span>()</span>
+<span id="cb1-6"></span>
+<span id="cb1-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Load Sentinel-2 imagery</span></span>
+<span id="cb1-8">s2 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> ee<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ImageCollection</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"COPERNICUS/S2_SR"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span></span>
+<span id="cb1-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filterDate</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2023-06-01"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2023-08-31"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span></span>
+<span id="cb1-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filterBounds</span>(my_study_area)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span></span>
+<span id="cb1-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(ee<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>Filter<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lt</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"CLOUDY_PIXEL_PERCENTAGE"</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>))</span>
+<span id="cb1-12"></span>
+<span id="cb1-13"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Calculate NDVI</span></span>
+<span id="cb1-14">ndvi <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> s2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(<span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(image) {</span>
+<span id="cb1-15">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">return</span>(image<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">normalizedDifference</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"B8"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"B4"</span>))<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rename</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"NDVI"</span>))</span>
+<span id="cb1-16">})</span>
+<span id="cb1-17"></span>
+<span id="cb1-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Get time series for analysis</span></span>
+<span id="cb1-19">ndvi_ts <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> ndvi<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">getRegion</span>(my_study_area, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span></code></pre></div>
+</details>
+</div>
+</section>
+<section id="satellite-data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="satellite-data-sources">Satellite Data Sources</h3>
+<p>The satellites I commonly work with include:</p>
+<ol type="1">
+<li><strong>Sentinel-2</strong>: High-resolution optical imagery (10-60m)</li>
+<li><strong>Landsat</strong>: Long-term historical data (30m)</li>
+<li><strong>MODIS</strong>: Daily global coverage (250-1000m)</li>
+<li><strong>Planet</strong>: Very high-resolution commercial imagery (3-5m)</li>
+</ol>
+</section>
+</section>
+<section id="real-world-applications" class="level2">
+<h2 class="anchored" data-anchor-id="real-world-applications">Real-World Applications</h2>
+<section id="pasture-management" class="level3">
+<h3 class="anchored" data-anchor-id="pasture-management">Pasture Management</h3>
+<p>In my current research, I’m developing systems for:</p>
+<ul>
+<li><strong>Biomass quantification</strong>: Estimating grass quantity for grazing management</li>
+<li><strong>Growth rate monitoring</strong>: Tracking pasture recovery after grazing</li>
+<li><strong>Seasonal patterns</strong>: Understanding long-term vegetation dynamics</li>
+</ul>
+</section>
+<section id="crop-monitoring" class="level3">
+<h3 class="anchored" data-anchor-id="crop-monitoring">Crop Monitoring</h3>
+<p>Remote sensing enables farmers to:</p>
+<ul>
+<li>Identify stressed areas before visual symptoms appear</li>
+<li>Optimize irrigation and fertilizer application</li>
+<li>Predict yields for planning and marketing</li>
+<li>Monitor crop development throughout the season</li>
+</ul>
+</section>
+</section>
+<section id="challenges-and-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="challenges-and-solutions">Challenges and Solutions</h2>
+<section id="cloud-cover" class="level3">
+<h3 class="anchored" data-anchor-id="cloud-cover">Cloud Cover</h3>
+<p>One major challenge in optical remote sensing is cloud cover. I address this by:</p>
+<ul>
+<li>Using time-series approaches with multiple observations</li>
+<li>Combining different satellite systems</li>
+<li>Implementing cloud-masking algorithms</li>
+<li>Exploring radar data (Sentinel-1) for cloudy conditions</li>
+</ul>
+</section>
+<section id="ground-truth-data" class="level3">
+<h3 class="anchored" data-anchor-id="ground-truth-data">Ground Truth Data</h3>
+<p>Accurate remote sensing requires field validation:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Example of correlating satellite data with field measurements</span></span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb2-3"></span>
+<span id="cb2-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(validation_data, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> satellite_ndvi, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> field_biomass)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">alpha =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.6</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_smooth</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lm"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb2-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Satellite NDVI vs Field Biomass"</span>,</span>
+<span id="cb2-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Satellite NDVI"</span>,</span>
+<span id="cb2-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Field Biomass (kg/ha)"</span></span>
+<span id="cb2-11">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
+</section>
+</section>
+<section id="machine-learning-integration" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-integration">Machine Learning Integration</h2>
+<p>Modern remote sensing increasingly relies on machine learning:</p>
+<section id="regression-models" class="level3">
+<h3 class="anchored" data-anchor-id="regression-models">Regression Models</h3>
+<ul>
+<li>Predicting continuous variables (biomass, yield)</li>
+<li>Using multiple spectral bands as predictors</li>
+<li>Time-series analysis for temporal patterns</li>
+</ul>
+</section>
+<section id="classification" class="level3">
+<h3 class="anchored" data-anchor-id="classification">Classification</h3>
+<ul>
+<li>Crop type mapping</li>
+<li>Disease detection</li>
+<li>Land use classification</li>
+</ul>
+</section>
+<section id="deep-learning" class="level3">
+<h3 class="anchored" data-anchor-id="deep-learning">Deep Learning</h3>
+<ul>
+<li>Convolutional neural networks for image analysis</li>
+<li>Recurrent neural networks for time-series</li>
+<li>Transfer learning from large datasets</li>
+</ul>
+</section>
+</section>
+<section id="future-directions" class="level2">
+<h2 class="anchored" data-anchor-id="future-directions">Future Directions</h2>
+<p>The field is rapidly evolving with:</p>
+<ol type="1">
+<li><strong>Higher spatial and temporal resolution</strong> satellites</li>
+<li><strong>Hyperspectral imaging</strong> for detailed crop analysis</li>
+<li><strong>AI and machine learning</strong> integration</li>
+<li><strong>Real-time data processing</strong> capabilities</li>
+<li><strong>Integration with IoT sensors</strong> for comprehensive monitoring</li>
+</ol>
+</section>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<p>For researchers interested in agricultural remote sensing:</p>
+<ol type="1">
+<li><strong>Learn R or Python</strong> for data analysis</li>
+<li><strong>Explore Google Earth Engine</strong> for satellite data access</li>
+<li><strong>Understand basic vegetation indices</strong> (NDVI, EVI, etc.)</li>
+<li><strong>Practice with open datasets</strong> (Landsat, Sentinel)</li>
+<li><strong>Connect with field measurements</strong> for validation</li>
+</ol>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Remote sensing is no longer just a research tool—it’s becoming essential for modern agriculture. As we face challenges of feeding a growing population while managing environmental resources, these technologies offer unprecedented insights into agricultural systems.</p>
+<p>The integration of satellite data, machine learning, and field expertise is creating new possibilities for precision agriculture that can increase productivity while reducing environmental impact.</p>
+<hr>
+<p><em>Want to learn more about my remote sensing research? <a href="mailto:gustavo.togeirodealckmin@missouri.edu">Contact me</a> or check out my <a href="../../projects.html">current projects</a>.</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>Remote Sensing</category>
+  <category>Agriculture</category>
+  <category>Research</category>
+  <guid>https://gtalckmin.github.io/alckmin-quarto-site/posts/remote-sensing-agriculture/index.html</guid>
+  <pubDate>Thu, 14 Mar 2024 16:00:00 GMT</pubDate>
+  <media:content url="https://gtalckmin.github.io/alckmin-quarto-site/posts/remote-sensing-agriculture/images/satellite-agriculture.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Hello R Markdown</title>
+  <dc:creator>Gustavo Togeiro de Alckmin</dc:creator>
+  <link>https://gtalckmin.github.io/alckmin-quarto-site/posts/hello-r-markdown/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="r-markdown-for-reproducible-research" class="level1">
+<h1>R Markdown for Reproducible Research</h1>
+<p>This is an R Markdown document demonstrating the power of literate programming. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>R Markdown has been instrumental in my research workflow, allowing me to combine code, analysis, and narrative in a single document. This is particularly valuable in agricultural research where reproducibility and transparency are crucial.</p>
+<section id="embedding-r-code" class="level2">
+<h2 class="anchored" data-anchor-id="embedding-r-code">Embedding R Code</h2>
+<p>You can embed an R code chunk like this:</p>
+<div class="cell" data-hash="index_cache/html/cars-summary_04673e39c1df6e24e135cef81978f4a8">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Load necessary libraries</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Examine the built-in cars dataset</span></span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(cars)</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>     speed           dist       
+ Min.   : 4.0   Min.   :  2.00  
+ 1st Qu.:12.0   1st Qu.: 26.00  
+ Median :15.0   Median : 36.00  
+ Mean   :15.4   Mean   : 42.98  
+ 3rd Qu.:19.0   3rd Qu.: 56.00  
+ Max.   :25.0   Max.   :120.00  </code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Fit a linear model</span></span>
+<span id="cb3-2">fit <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(dist <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> speed, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> cars)</span>
+<span id="cb3-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(fit)</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = dist ~ speed, data = cars)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-29.069  -9.525  -2.272   9.215  43.201 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -17.5791     6.7584  -2.601   0.0123 *  
+speed         3.9324     0.4155   9.464 1.49e-12 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 15.38 on 48 degrees of freedom
+Multiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 
+F-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12</code></pre>
+</div>
+</div>
+<p>The relationship between speed and stopping distance is clearly non-linear, which is typical in many agricultural and physical processes I work with in my remote sensing research.</p>
+</section>
+<section id="creating-visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="creating-visualizations">Creating Visualizations</h2>
+<p>Let’s create a more informative plot than the original:</p>
+<div class="cell" data-hash="index_cache/html/fig-speed-distance_2ba189e86a62026dd8a058061769f2da">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(cars, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> speed, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> dist)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#2c3e50"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">alpha =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.7</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_smooth</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lm"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#3498db"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#3498db"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">alpha =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.2</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb5-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Car Speed vs Stopping Distance"</span>,</span>
+<span id="cb5-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Speed (mph)"</span>,</span>
+<span id="cb5-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Stopping Distance (ft)"</span>,</span>
+<span id="cb5-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Linear relationship with considerable variation"</span></span>
+<span id="cb5-9">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb5-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">14</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">face =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bold"</span>),</span>
+<span id="cb5-13">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.subtitle =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gray60"</span>),</span>
+<span id="cb5-14">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>),</span>
+<span id="cb5-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.grid.minor =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>()</span>
+<span id="cb5-16">  )</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-speed-distance" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://gtalckmin.github.io/alckmin-quarto-site/posts/hello-r-markdown/index_files/figure-html/fig-speed-distance-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Relationship between speed and stopping distance</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="including-traditional-plots" class="level2">
+<h2 class="anchored" data-anchor-id="including-traditional-plots">Including Traditional Plots</h2>
+<p>You can also embed traditional R plots. Here’s the classic pie chart example:</p>
+<div class="cell" data-hash="index_cache/html/fig-pie_d42b6fd8e86e7153d22ab6477b1c3caa">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">par</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mar =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>))</span>
+<span id="cb6-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pie</span>(</span>
+<span id="cb6-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">280</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">60</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>),</span>
+<span id="cb6-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Sky'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Sunny side of pyramid'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Shady side of pyramid'</span>),</span>
+<span id="cb6-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">col =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'#0292D8'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'#F7EA39'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'#C4B632'</span>),</span>
+<span id="cb6-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">init.angle =</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>, </span>
+<span id="cb6-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">border =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NA</span></span>
+<span id="cb6-8">)</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-pie" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://gtalckmin.github.io/alckmin-quarto-site/posts/hello-r-markdown/index_files/figure-html/fig-pie-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: A fancy pie chart demonstrating traditional R graphics</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="relevance-to-agricultural-research" class="level2">
+<h2 class="anchored" data-anchor-id="relevance-to-agricultural-research">Relevance to Agricultural Research</h2>
+<p>In my work with remote sensing and agricultural data, R Markdown serves several important purposes:</p>
+<ol type="1">
+<li><strong>Reproducible Analysis</strong>: All analysis steps are documented and can be re-run</li>
+<li><strong>Transparent Methods</strong>: Code is visible alongside results and interpretation</li>
+<li><strong>Efficient Report Generation</strong>: Same document can produce multiple output formats</li>
+<li><strong>Version Control</strong>: Text-based format works well with Git for tracking changes</li>
+</ol>
+<p>This approach has been invaluable in my PhD research and current postdoc work, where reproducibility and transparency are essential for scientific credibility.</p>
+</section>
+<section id="modern-alternatives" class="level2">
+<h2 class="anchored" data-anchor-id="modern-alternatives">Modern Alternatives</h2>
+<p>While R Markdown has served the community well, I’m now transitioning to <strong>Quarto</strong> (which powers this website) as it offers:</p>
+<ul>
+<li>Better multi-language support (R, Python, Julia)</li>
+<li>More flexible output formats</li>
+<li>Enhanced web publishing capabilities</li>
+<li>Improved visual editor</li>
+</ul>
+<p>The principles remain the same: combining code, analysis, and narrative for reproducible research.</p>
+<hr>
+<p><em>This post demonstrates the evolution of my documentation and analysis workflow from traditional R Markdown to modern Quarto publishing.</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R</category>
+  <category>Data Science</category>
+  <guid>https://gtalckmin.github.io/alckmin-quarto-site/posts/hello-r-markdown/index.html</guid>
+  <pubDate>Wed, 22 Jul 2015 16:00:00 GMT</pubDate>
+  <media:content url="https://gtalckmin.github.io/alckmin-quarto-site/posts/hello-r-markdown/plots/pie-chart.png" medium="image" type="image/png"/>
+</item>
+</channel>
+</rss>
